@@ -1,0 +1,68 @@
+@import 'src/styles/variables/index';
+@import 'src/styles/mixins/index';
+
+.th-mapview {
+  flex: 1;
+  position: relative;
+  transition: transform 0.3s;
+
+  .th-map-container {
+    position: absolute;
+    top: $search-bar-height;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    display: flex;
+
+    .th-map {
+      flex: 1;
+      z-index: 1;
+    }
+
+    .th-map-overlays {
+      position: absolute;
+      left: $sider-width;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      transition: left 0.3s, transform 0.3s;
+    }
+  }
+
+  .th-sider.th-wide + .th-map-container {
+    .th-map-overlays {
+      left: $sider-wide-width;
+    }
+  }
+
+  .th-sider.th-hide + .th-map-container {
+    .th-map-overlays {
+      left: 0;
+    }
+  }
+
+  @media (max-width: $break-sm) {
+    .th-map-container {
+      position: fixed;
+      top: $app-header-height + $search-bar-height;
+    }
+
+    .th-search-bar {
+      position: fixed;
+      top: $app-header-height;
+    }
+
+    .th-sider + .th-map-container {
+      transform: translateX(100%);
+
+      .th-map-overlays {
+        left: 0;
+      }
+    }
+
+    .th-sider.th-hide + .th-map-container {
+      transform: translateX(0);
+    }
+  }
+}

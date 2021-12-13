@@ -1,0 +1,87 @@
+@import 'src/styles/variables/index';
+@import 'src/styles/mixins/index';
+
+.th-modal {
+  margin: 0;
+  padding: 24px;
+  position: relative;
+
+  .th-close-button {
+    @include th-close-button;
+    top: 21px;
+    right: 18px;
+  }
+}
+
+$ok-button-background: $primary;
+$ok-button-color: $white;
+$cancel-button-color: #37474f;
+
+.th-alert-modal {
+  padding: 24px;
+  min-width: 300px;
+
+  .th-modal-body {
+    @include th-flex-row;
+
+    > .th-icon {
+      margin-right: 12px;
+      width: 28px;
+      height: 28px;
+    }
+
+    .th-confirm-icon,
+    .th-warning-icon {
+      color: $warning;
+    }
+
+    .th-success-icon {
+      color: $success;
+    }
+
+    .th-error-icon {
+      color: $error;
+    }
+
+    .th-info-icon {
+      color: $info;
+    }
+  }
+
+  .th-modal-title {
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  .th-modal-content {
+    margin-top: 8px;
+    color: rgba(0, 0, 0, 0.65);
+    font-size: 14px;
+  }
+
+  .th-modal-actions {
+    @include th-flex-row;
+    justify-content: flex-end;
+    margin-top: 24px;
+
+    .th-action-button {
+      border-radius: 4px;
+      font-size: 14px;
+      padding: 4px 15px;
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+
+    .th-cancel-action {
+      border: 1px solid #d9d9d9;
+      color: $cancel-button-color;
+    }
+
+    .th-ok-action {
+      background: $ok-button-background;
+      color: $ok-button-color;
+    }
+  }
+}

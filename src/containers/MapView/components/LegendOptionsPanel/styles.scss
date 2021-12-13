@@ -1,0 +1,90 @@
+@import 'src/styles/mixins/index';
+
+.th-legend-options-panel {
+  width: 260px;
+  padding: 12px 20px 16px;
+
+  .th-colors,
+  .th-circles {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .th-colors > div {
+    // flex: 1;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    overflow: hidden;
+
+    &:not(:last-child) {
+      margin-right: 3px;
+    }
+  }
+
+  .th-circles > div {
+    flex: 0 0 auto;
+    border-radius: 50%;
+    overflow: hidden;
+    background: #858585;
+
+    &:not(:last-child) {
+      margin-right: 4px;
+    }
+  }
+
+  .th-pin {
+    width: 52px;
+    height: 27px;
+  }
+
+  .th-select {
+    width: 100%;
+    border: 1px solid #eee;
+
+    .th-select-input {
+      font-size: 12px;
+      font-weight: normal;
+      letter-spacing: -0.1px;
+      color: #858585;
+      padding: 10px 20px;
+    }
+  }
+
+  .th-checkbox {
+    margin: 8px 0;
+
+    .th-check {
+      width: 21px;
+      height: 21px;
+      margin-right: 10px;
+    }
+
+    .th-checkbox-label {
+      font-size: 12px;
+      font-weight: 500;
+      line-height: normal;
+      letter-spacing: -0.1px;
+      color: #000000;
+    }
+  }
+
+  .th-switch {
+    margin-right: -10px;
+  }
+
+  .th-option {
+    .th-option-row {
+      @include th-flex-row-center;
+      justify-content: space-between;
+    }
+
+    .th-option-title {
+      color: #000000;
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: -0.09px;
+    }
+  }
+}

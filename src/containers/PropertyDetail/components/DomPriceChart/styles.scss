@@ -1,0 +1,25 @@
+.th-date-price-chart {
+  position: relative;
+
+  .th-date-picker {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .th-date-option {
+    font-size: 12px;
+    line-height: 2.83;
+    letter-spacing: -0.2px;
+    justify-content: left;
+    border-radius: 4px;
+    background: white;
+    padding: 0 10px !important;
+    margin: 0 2px;
+
+    &.th-selected {
+      background: #6651f5;
+      color: white;
+    }
+  }
+}

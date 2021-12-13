@@ -1,0 +1,28 @@
+@import 'src/styles/variables/index';
+
+.th-searchable-select {
+  flex: 1 0 auto;
+  .th-select-input-root {
+    padding: 0 8px !important;
+  }
+
+  .th-select-input {
+    font-size: 14px;
+    color: $text;
+  }
+
+  fieldset {
+    border: 1px solid $border !important;
+  }
+}
+
+.th-searchable-select.th-focused {
+  fieldset {
+    border: 2px solid $primary !important;
+  }
+}
+
+.th-searchable-select-popper .th-select-option {
+  font-size: 14px;
+  color: $text;
+}

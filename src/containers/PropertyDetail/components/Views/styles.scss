@@ -1,0 +1,26 @@
+@import 'src/styles/variables/index';
+
+.th-property-detail .th-viewer-container {
+  height: 545px;
+  max-height: calc(100vh - 240px);
+  min-height: 360px;
+  background: #888;
+  overflow: hidden;
+
+  .th-map-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  iframe {
+    width: 100%;
+    height: 100%;
+    border: 1px solid #eee;
+  }
+}
+
+.th-property-detail.th-break-md .th-viewer-container {
+  height: 420px;
+}

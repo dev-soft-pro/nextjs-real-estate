@@ -1,0 +1,52 @@
+.th-analytics-layer-options {
+  .th-select {
+    width: 100%;
+    border: 1px solid #858585;
+
+    .th-select-input {
+      font-size: 12px;
+      font-weight: normal;
+      letter-spacing: -0.1px;
+      color: white;
+      padding: 10px 20px;
+    }
+
+    svg {
+      color: white;
+    }
+  }
+
+  .th-checkbox {
+    margin: 8px 0;
+
+    .th-check {
+      width: 21px;
+      height: 21px;
+      margin-right: 10px;
+
+      svg {
+        color: white;
+      }
+    }
+
+    .th-checkbox-label {
+      font-size: 12px;
+      letter-spacing: -0.1px;
+      color: white;
+    }
+  }
+
+  .th-label {
+    font-size: 12px;
+    letter-spacing: -0.1px;
+    color: white;
+  }
+
+  .th-input-container {
+    .th-input {
+      background: transparent;
+      border: 1px solid #858585;
+      color: white;
+    }
+  }
+}

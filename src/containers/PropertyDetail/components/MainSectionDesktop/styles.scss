@@ -1,0 +1,53 @@
+@import 'src/styles/variables/index';
+@import 'src/styles/mixins/index';
+
+.th-property-detail .th-agent-section {
+  @include th-flex-row-center;
+  border-bottom: solid 1px #eeeeee;
+  padding: 20px 0;
+
+  .th-agent-avatar {
+    width: 42px;
+    height: 42px;
+    font-size: 16px;
+    margin-right: 12px;
+    overflow: hidden;
+  }
+
+  .th-agent-name {
+    font-size: 14px;
+    font-weight: bold;
+    line-height: normal;
+    letter-spacing: -0.1px;
+    color: #000000;
+    margin-top: 4px;
+  }
+
+  .th-agent-company {
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.29;
+    letter-spacing: -0.2px;
+    color: #858585;
+  }
+}
+
+.th-description-section {
+  border-bottom: solid 1px #eeeeee;
+  padding: 20px 0;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.29;
+  letter-spacing: -0.2px;
+  color: #858585;
+
+  .th-section-title {
+    font-size: 20px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.2;
+    color: #000000;
+    margin-bottom: 12px;
+  }
+}

@@ -1,0 +1,41 @@
+$header-height: 60px;
+$app-header-height: 50px;
+$search-bar-height: 60px;
+$sider-width: 370px;
+$sider-wide-width: 740px;
+$side-menu-width: 60px;
+
+$break-xl: 1440px;
+$break-lg: 960px;
+$break-md: 720px;
+$break-sm: 540px;
+$break-xs: 375px;
+
+// Grid columns
+//
+// Set the number of columns and specify the width of the gutters.
+$grid-columns: 12 !default;
+$grid-gutter-width: 30px !default;
+
+// Grid breakpoints
+//
+// Define the minimum dimensions at which your layout will change,
+// adapting to different screen sizes, for use in media queries.
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: $break-sm,
+  md: $break-md,
+  lg: $break-lg,
+  xl: $break-xl
+) !default;
+
+// Grid containers
+//
+// Define the maximum width of `.th-container` for different screen sizes.
+$container-max-widths: (
+  sm: $break-sm,
+  md: $break-md,
+  lg: $break-lg,
+  xl: $break-xl
+) !default;

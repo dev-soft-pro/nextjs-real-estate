@@ -1,0 +1,79 @@
+.th-tooltip-trigger {
+  border-bottom: 1px dotted #858585;
+  cursor: pointer;
+}
+
+$background-color: rgba(white, 0.95);
+
+.th-tooltip-overlay {
+  background: $background-color !important;
+  box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.2);
+  color: black !important;
+  font-size: 12px !important;
+  position: relative;
+}
+
+.th-tooltip-arrow {
+  position: absolute;
+  font-size: 6px;
+  &::before {
+    content: ' ';
+    margin: 0;
+    display: block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+  }
+}
+
+.th-tooltip-popper[x-placement*='left'] .th-tooltip-arrow {
+  right: 0;
+  top: 50% !important;
+  transform: translateY(-50%);
+  height: 2em;
+  width: 1em;
+  margin-right: -0.95em;
+  &::before {
+    border-width: 1em 0 1em 1em;
+    border-color: transparent transparent transparent $background-color;
+  }
+}
+
+.th-tooltip-popper[x-placement*='right'] .th-tooltip-arrow {
+  left: 0;
+  top: 50% !important;
+  transform: translateY(-50%);
+  height: 2em;
+  width: 1em;
+  margin-left: -0.95em;
+  &::before {
+    border-width: 1em 1em 1em 0;
+    border-color: transparent $background-color transparent transparent;
+  }
+}
+
+.th-tooltip-popper[x-placement*='top'] .th-tooltip-arrow {
+  bottom: 0;
+  left: 50% !important;
+  transform: translateX(-50%);
+  width: 2em;
+  height: 1em;
+  margin-bottom: -0.95em;
+  &::before {
+    border-width: 1em 1em 0 1em;
+    border-color: $background-color transparent transparent transparent;
+  }
+}
+
+.th-tooltip-popper[x-placement*='bottom'] .th-tooltip-arrow {
+  top: 0;
+  left: 50% !important;
+  transform: translateX(-50%);
+  width: 2em;
+  height: 1em;
+  margin-top: -0.95em;
+  &::before {
+    border-width: 0 1em 1em 1em;
+    border-color: transparent transparent $background-color transparent;
+  }
+}

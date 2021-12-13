@@ -1,0 +1,41 @@
+.th-overview {
+  .th-section-title {
+    width: 100%;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: 0.3px;
+    color: #000000;
+    margin-bottom: 16px;
+  }
+
+  .th-overview-records {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-bottom: 16px;
+    border-bottom: dashed 1px #eeeeee;
+
+    .th-overview-record {
+      flex: 1 1 33%;
+      display: flex;
+      align-items: center;
+      color: #858585;
+      padding: 12px 0;
+
+      .th-icon {
+        margin-right: 20px;
+      }
+
+      .th-value {
+        font-size: 14px;
+        letter-spacing: -0.2px;
+      }
+    }
+  }
+
+  .th-mls-logo {
+    height: 20px;
+    margin-left: 12px;
+  }
+}

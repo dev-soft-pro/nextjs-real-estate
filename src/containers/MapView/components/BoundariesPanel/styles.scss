@@ -1,0 +1,110 @@
+@import 'src/styles/variables/index';
+
+.th-boundaries-panel-trigger {
+  position: absolute !important;
+  bottom: 115px;
+  right: 15px;
+  border-radius: 8px !important;
+  box-shadow: 0 8px 24px 0 rgba(0, 0, 0, 0.3);
+  padding: 0;
+  overflow: hidden;
+  z-index: 70;
+
+  svg {
+    color: white;
+  }
+
+  .th-trigger-icon {
+    width: 60px;
+    height: 60px;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+    object-fit: contain;
+    overflow: hidden;
+  }
+
+  .th-lock-badge {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #d43f51;
+    filter: drop-shadow(0px 0px 4px #fff);
+  }
+}
+
+.th-boundaries-panel {
+  position: absolute;
+  bottom: 178px;
+  right: 15px;
+  background: transparent;
+  box-shadow: none;
+  padding-top: 0px;
+  z-index: 98;
+  transform-origin: 84% 100%;
+
+  .th-panel-body {
+    background: white;
+    border-radius: 4px;
+    box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.3);
+    width: 180px;
+    overflow: hidden;
+
+    .th-panel-title {
+      font-size: 14px;
+      font-weight: bold;
+      letter-spacing: -0.1px;
+      margin-bottom: 2px;
+      padding: 16px 20px 8px 20px;
+    }
+
+    .th-checkbox,
+    .th-geo-checkbox {
+      margin: 0;
+      .th-checkbox-label {
+        font-size: 14px;
+        font-weight: bold;
+        letter-spacing: -0.1px;
+        margin-bottom: 2px;
+      }
+    }
+
+    .th-geo-checkbox {
+      margin: 6px 10px 4px 10px;
+    }
+
+    .th-divider {
+      background: #eeeeee;
+      height: 1px;
+    }
+
+    .th-boundary-options {
+      display: flex;
+      flex-direction: column;
+      padding: 8px 16px 12px 16px;
+
+      .th-check {
+        padding: 3px;
+        margin-right: 6px;
+      }
+    }
+  }
+
+  .th-triangle-down {
+    margin-right: 21px;
+    margin-left: auto;
+    margin-bottom: 4px;
+  }
+}
+
+@media (max-width: $break-sm) {
+  .th-boundaries-panel-trigger {
+    bottom: 138px;
+    right: 10px;
+  }
+
+  .th-boundaries-panel {
+    bottom: 200px;
+    right: 10px;
+  }
+}

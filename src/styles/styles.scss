@@ -1,0 +1,53 @@
+@import 'variables/index';
+
+@import 'base';
+@import 'reset';
+@import 'mixins/index';
+
+.th-app {
+  @include th-flex-column;
+  width: 100vw;
+  max-width: 100%;
+  min-height: 100vh;
+}
+
+.th-app-content {
+  flex: 1;
+  @include th-flex-column;
+  transition: transform 0.3s;
+
+  &.th-app-mode {
+    @media (min-width: $break-sm) {
+      margin-left: $side-menu-width;
+    }
+
+    @media (max-width: $break-sm) {
+      margin-top: $app-header-height;
+    }
+  }
+}
+
+.th-header + .th-app-content > :not(.th-landing) {
+  margin-top: $header-height;
+}
+
+.th-app-header + .th-app-content > :not(.th-landing) {
+  margin-top: $app-header-height;
+}
+
+@media (max-width: $break-sm) {
+  body.th-mapview-showed {
+    overflow: hidden;
+  }
+
+  body.th-sider-showed {
+    overflow: auto;
+    position: unset;
+  }
+
+  body.th-main-menu-showed,
+  body.th-filters-showed {
+    overflow: hidden;
+    position: fixed;
+  }
+}

@@ -1,0 +1,115 @@
+.th-swipable-carousel-container {
+  pointer-events: auto;
+  padding-bottom: 66%; // width / height = 1.5
+  position: relative;
+  overflow: hidden;
+
+  .th-carousel-actions {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s;
+    pointer-events: none;
+    z-index: 1;
+
+    .th-action-left,
+    .th-action-right {
+      cursor: pointer;
+      pointer-events: auto;
+      position: absolute;
+      top: 50%;
+      width: 48px;
+      height: 64px;
+      padding: 18px;
+      object-fit: none;
+
+      &.th-disabled {
+        opacity: 0.3;
+      }
+    }
+
+    .th-action-left {
+      left: 0px;
+      transform: translateY(-50%) rotateY(180deg);
+    }
+
+    .th-action-right {
+      right: 0px;
+      transform: translateY(-50%);
+    }
+
+    .th-action-checkbox {
+      position: absolute;
+      object-fit: cover;
+      right: 8px;
+      top: 8px;
+    }
+  }
+
+  &:hover,
+  &.th-mobile {
+    .th-carousel-actions {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}
+
+.th-swipable-carousel {
+  position: absolute;
+  left: -1px;
+  right: -1px;
+  width: calc(100% + 2px);
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  overflow: auto;
+  background: #000000;
+  scroll-snap-type: x mandatory;
+  -webkit-scroll-snap-type: mandatory;
+  -webkit-overflow-scrolling: touch;
+
+  .th-swipable-autoplay {
+    left: 0;
+    top: 0;
+    position: absolute;
+    opacity: 0;
+  }
+
+  .th-image-container {
+    height: 100%;
+    width: 100%;
+    min-width: 100%;
+    padding: 0 1px;
+    background: #404040;
+    scroll-snap-align: start;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff8;
+
+    .th-image {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+      opacity: 1;
+      transition: opacity 0.5s;
+    }
+
+    .th-icon {
+      width: 42px;
+      height: 40px;
+    }
+
+    &.th-placeholder {
+      .th-image {
+        opacity: 0.8;
+      }
+    }
+  }
+}

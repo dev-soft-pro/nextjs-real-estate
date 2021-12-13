@@ -1,0 +1,45 @@
+.th-collapsable-panel {
+  border-bottom: 1px solid #eeeeee;
+  overflow: hidden;
+
+  .th-panel-header {
+    font-size: 20px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.2;
+    color: #000000;
+    padding: 21px 0;
+    position: relative;
+    background: white;
+    z-index: 1;
+    cursor: pointer;
+
+    .th-expand-icon {
+      position: absolute;
+      right: 0px;
+      top: 20px;
+      transition: all 0.3s;
+    }
+
+    .th-expand-icon.th-expanded {
+      transform: rotateX(180deg);
+    }
+  }
+
+  .th-panel-body {
+    transition: all 0.25s ease-in-out;
+    overflow: hidden;
+    
+    max-height: 0;
+    margin-bottom: 0;
+    position: relative;
+  }
+
+  &.th-expanded {
+    .th-panel-body {
+      max-height: 100%;
+      margin-bottom: unset;
+    }
+  }
+}

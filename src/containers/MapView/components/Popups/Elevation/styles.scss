@@ -1,0 +1,28 @@
+.th-elevation-popup {
+  padding: 6px 8px;
+  font-size: 10px;
+  line-height: 16px;
+  letter-spacing: -0.08px;
+  white-space: nowrap;
+  background: rgba(white, 0.85);
+  border-radius: 4px;
+
+  > .th-info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 2px 0;
+  }
+
+  .th-label {
+    font-weight: normal;
+    color: #858585;
+    margin-right: 4px;
+  }
+
+  .th-value {
+    font-weight: 500;
+    color: #000000;
+    margin-right: 8px;
+  }
+}

@@ -1,0 +1,76 @@
+@import 'src/styles/variables/index';
+
+.th-compare-linechart {
+  position: relative;
+  user-select: none;
+
+  .recharts-tooltip-wrapper {
+    user-select: none;
+  }
+}
+
+.th-tooltip-box {
+  background: rgba(#fff, 0.9);
+  border-radius: 10px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  margin: 40px;
+  padding: 10px 24px 16px 24px;
+  user-select: none;
+
+  .th-date {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 14px;
+
+    .th-date-range {
+      margin-left: 8px;
+      color: #666;
+      font-size: 12px;
+    }
+  }
+
+  .th-info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 5px;
+  }
+
+  .th-indicator {
+    flex: 0 0 auto;
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    margin-right: 13px;
+  }
+
+  .th-address {
+    color: #858585;
+    font-size: 12px;
+    margin-right: 12px;
+  }
+
+  .th-value {
+    font-size: 12px;
+    font-weight: 500;
+  }
+
+  .th-accuracy {
+    font-size: 11px;
+    color: #666;
+    margin-left: 4px;
+  }
+
+  .th-range {
+    font-size: 12px;
+    margin-left: 8px;
+
+    span:first-child {
+      margin-right: 8px;
+    }
+  }
+}

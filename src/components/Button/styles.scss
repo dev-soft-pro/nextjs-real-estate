@@ -1,0 +1,21 @@
+@import 'src/styles/mixins/index';
+
+.th-button {
+  cursor: pointer;
+  position: relative;
+
+  @include th-flex-row-center;
+}
+
+.th-button.th-hitslop {
+  overflow: visible !important;
+}
+
+.th-button.th-hitslop::after {
+  content: '';
+  position: absolute;
+  top: -12px;
+  bottom: -12px;
+  left: -12px;
+  right: -12px;
+}

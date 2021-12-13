@@ -1,0 +1,49 @@
+@import 'node_modules/cropperjs/src/css/cropper.scss';
+
+.th-avatar-editor {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  // overflow: hidden;
+
+  .th-crop-section {
+    flex: 1;
+    overflow: hidden;
+    .th-crop-wrapper {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+  }
+
+  .th-preview-section {
+    flex: 0 0 auto;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .th-preview {
+      width: 96px;
+      height: 96px;
+      border-radius: 50%;
+      overflow: hidden;
+      margin-bottom: 48px;
+    }
+
+    .th-select-button {
+      width: 96px;
+      height: 36px;
+
+      border-radius: 21px;
+      background-image: linear-gradient(to right, #8ed24b, #a4e266);
+
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 1;
+      letter-spacing: -0.2px;
+      color: #ffffff;
+    }
+  }
+}

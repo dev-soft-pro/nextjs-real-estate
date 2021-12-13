@@ -1,0 +1,7 @@
+@import 'src/styles/mixins/index';
+
+.th-snackbar {
+  .th-snackbar-content {
+    @include th-dark-panel;
+  }
+}

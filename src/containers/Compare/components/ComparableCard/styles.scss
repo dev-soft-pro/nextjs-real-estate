@@ -1,0 +1,102 @@
+@import 'src/styles/variables/index';
+@import 'src/styles/mixins/index';
+
+.th-comparable-card {
+  position: relative;
+
+  background: white;
+  border: 1px solid #eee;
+  border-radius: 12px 12px 0px 0px;
+  border-bottom-width: 0px;
+  text-align: left;
+  margin-right: 11px;
+
+  .th-preview-container {
+    padding: 10px;
+
+    border-bottom-width: 6px;
+    border-bottom-style: solid;
+  }
+
+  .th-head-row {
+    border-bottom: 1px solid #eee;
+  }
+
+  .th-image {
+    width: 100%;
+    height: 140px;
+    margin-bottom: 4px;
+
+    border-radius: 12px;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .th-view-button {
+    border-radius: 4px;
+    color: $primary;
+    font-size: 12px;
+    letter-spacing: -0.2px;
+    padding: 4px 10px;
+    margin: 0 -10px;
+  }
+
+  .th-address {
+    height: 38px;
+    color: #000;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: -0.27px;
+    line-height: normal;
+    margin-bottom: 8px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .th-actions {
+    height: 20px;
+    @include th-flex-row-center;
+    justify-content: space-between;
+  }
+
+  .th-visible-button,
+  .th-delete-button {
+    width: 30px;
+    height: 30px;
+
+    border-radius: 50%;
+    color: #a7a7a7;
+  }
+
+  .th-primary-mark,
+  .th-primary-button {
+    min-width: 80px;
+    padding: 0 10px;
+    height: 24px;
+    background-color: #20cb4c;
+    border-radius: 12px;
+    color: #fff;
+    font-size: 12px;
+    line-height: 24px;
+    text-align: center;
+  }
+
+  .th-primary-button {
+    background-color: #a7a7a7;
+  }
+
+  @media (max-width: $break-sm) {
+    .th-address {
+      font-size: 14px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+  }
+}

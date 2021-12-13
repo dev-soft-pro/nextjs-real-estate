@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="17" height="20" viewBox="0 0 17 20">
+    <defs>
+        <linearGradient id="b" x1="97.627%" x2="1.57%" y1="50%" y2="50%">
+            <stop offset="0%" stop-color="#465FF5"/>
+            <stop offset="100%" stop-color="#6E4EF6"/>
+        </linearGradient>
+        <path id="a" d="M11.584.734l5.85 3.492a2.4 2.4 0 0 1 1.17 2.06v7.124a2.4 2.4 0 0 1-1.17 2.061l-5.85 3.492a2.4 2.4 0 0 1-2.46 0l-5.85-3.492a2.4 2.4 0 0 1-1.17-2.06V6.286a2.4 2.4 0 0 1 1.17-2.061L9.124.734a2.4 2.4 0 0 1 2.46 0z"/>
+        <path id="d" d="M9.71 8.12H7.861V6.97h4.983v1.15h-1.847v5.213H9.709V8.12zm0 0v1.188l1.288-1.189H9.709z"/>
+    </defs>
+    <g fill="none" fill-rule="evenodd" transform="translate(-2)">
+        <mask id="c" fill="#fff">
+            <use xlink:href="#a"/>
+        </mask>
+        <use fill="url(#b)" xlink:href="#a"/>
+        <g fill="#A7A7A7" mask="url(#c)">
+            <path d="M2-.697h17v21H2z"/>
+        </g>
+        <mask id="e" fill="#fff">
+            <use xlink:href="#d"/>
+        </mask>
+        <use fill="#FFF" xlink:href="#d"/>
+        <g fill="#FFF" mask="url(#e)">
+            <path d="M2 2.424h16v15H2z"/>
+        </g>
+    </g>
+</svg>

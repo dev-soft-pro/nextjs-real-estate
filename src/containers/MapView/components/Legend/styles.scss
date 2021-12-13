@@ -1,0 +1,346 @@
+@import 'src/styles/variables/index';
+
+$hexagon-size: 12px;
+
+.th-map-legend + .th-map-legend-trigger {
+  position: absolute;
+  left: 46px;
+  top: 20px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.7);
+
+  z-index: 70;
+  transform: scale(1);
+  visibility: visible;
+  transition: all 0.3s;
+
+  svg {
+    color: white;
+  }
+}
+
+.th-map-legend {
+  position: absolute;
+  top: 20px;
+  left: 46px;
+  width: 260px;
+  z-index: 1 !important;
+  transform: scale(0);
+  transform-origin: 30px 20px;
+  visibility: hidden;
+  transition: all 0.3s;
+  padding-bottom: 4px;
+
+  background-color: rgba(0, 0, 0, 0.8);
+  box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  font-size: 16px;
+
+  > .th-section {
+    padding: 6px 16px;
+    &:not(:last-child) {
+      border-bottom: solid 1px rgba(#eeeeee, 0.18);
+    }
+
+    .th-section-title {
+      font-size: 0.75em;
+      font-weight: bold;
+      line-height: normal;
+      letter-spacing: -0.1px;
+      color: #ffffff;
+      margin-bottom: 4px;
+      display: flex;
+      align-items: center;
+    }
+
+    .th-descriptive-info-button {
+      margin-left: 8px;
+      font-size: 12px;
+    }
+
+    .th-section-body {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      margin: 3px 0;
+
+      .th-value {
+        text-align: center;
+        font-size: 0.625em;
+        font-weight: normal;
+        line-height: 1.6;
+        letter-spacing: -0.1px;
+        color: #858585;
+      }
+
+      .th-value:first-child {
+        margin-right: 8px;
+      }
+
+      .th-value:last-child {
+        margin-left: 8px;
+      }
+    }
+
+    .th-callout {
+      color: #858585;
+      text-align: center;
+      font-size: 12px;
+      margin-bottom: -4px;
+    }
+
+    .th-callout-icon {
+      flex: 1;
+      position: relative;
+      margin: 4px 0;
+
+      img {
+        padding: 0px 2px;
+        width: 100%;
+        object-fit: contain;
+      }
+
+      span {
+        position: absolute;
+        color: white;
+        font-size: 10px;
+        font-weight: bold;
+        top: 45%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+
+    .th-time-period-checkbox {
+      margin: 0 4px 4px -2px;
+
+      .th-check {
+        padding: 0;
+        width: 21px;
+        height: 21px;
+        margin-right: 8px;
+
+        svg {
+          color: white;
+        }
+      }
+
+      .th-checkbox-label {
+        font-size: 0.75em;
+        font-weight: bold;
+        line-height: normal;
+        letter-spacing: -0.1px;
+        color: #ffffff;
+      }
+    }
+  }
+
+  > .th-section:not(.th-header-section) {
+    .th-colors,
+    .th-hexagons,
+    .th-circles,
+    .th-rects {
+      width: 148px;
+
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .th-colors > div {
+      // flex: 1;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      overflow: hidden;
+
+      &:not(:last-child) {
+        margin-right: 3px;
+      }
+    }
+
+    .th-circles > div {
+      flex: 0 0 auto;
+      border-radius: 50%;
+      overflow: hidden;
+      background: #858585;
+    }
+
+    .th-rects {
+      align-items: flex-end;
+      > div {
+        flex: 1;
+        background: #858585;
+
+        &:not(:last-child) {
+          margin-right: 5px;
+        }
+      }
+    }
+
+    .th-hexagons > div {
+      & {
+        position: relative;
+        width: $hexagon-size;
+        height: $hexagon-size * 0.58;
+        margin: $hexagon-size * 0.293;
+      }
+
+      &:before,
+      &:after {
+        content: '';
+        position: absolute;
+        width: 0;
+        border-left: $hexagon-size/2 solid transparent;
+        border-right: $hexagon-size/2 solid transparent;
+      }
+
+      &:before {
+        bottom: 100%;
+        border-bottom: $hexagon-size * 0.293 solid currentColor;
+      }
+
+      &:after {
+        top: 100%;
+        width: 0;
+        border-top: $hexagon-size * 0.293 solid currentColor;
+      }
+    }
+  }
+
+  .th-header-section {
+    display: flex;
+    flex-direction: row;
+    padding: 4px 12px;
+    align-items: center;
+    justify-content: flex-start;
+
+    .th-section-title {
+      margin: 0 10px;
+    }
+
+    .th-close-button {
+      flex: 0 0 auto;
+      color: white;
+      cursor: pointer;
+      border-radius: 50%;
+      padding: 4px;
+
+      svg {
+        width: 18px;
+        height: 18px;
+      }
+    }
+  }
+
+  .th-analytics-section {
+    .th-section-title {
+      cursor: pointer;
+    }
+  }
+
+  .th-period-section {
+    .th-pre-selected-dates {
+      border: 1px solid #858585;
+      border-radius: 21px;
+      overflow: hidden;
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      height: 30px;
+
+      .th-button {
+        flex: 1;
+        color: white;
+        font-size: 0.625em;
+        font-weight: 500;
+        letter-spacing: -0.17px;
+
+        &:not(:last-child) {
+          border-right: 1px solid #858585;
+        }
+      }
+
+      .th-button.th-selected {
+        background: linear-gradient(to left, #465ff5, #6e4ef6);
+      }
+
+      .th-button.th-disabled {
+        background: #59595988;
+      }
+    }
+  }
+
+  .th-option-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 6px 8px;
+    height: 35px;
+    color: #fff;
+    font-size: 12px;
+    border-radius: 4px;
+
+    svg {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  .th-option-panel {
+    top: 0;
+    left: calc(100% + 4px);
+    transform-origin: top left;
+
+    @media (max-width: $break-sm) {
+      left: unset;
+      right: 0;
+      transform-origin: top right;
+    }
+    .th-panel-body {
+      background: white;
+      border-radius: 4px;
+      color: $primary;
+    }
+  }
+}
+
+.th-map-legend.th-expanded {
+  transform: scale(1);
+  visibility: visible;
+}
+
+.th-map-legend.th-mobile.th-expanded {
+  transform: scale(0.7);
+  font-size: 20px;
+
+  .th-callout {
+    font-size: 14px;
+  }
+
+  .th-header-section {
+    .th-close-button {
+      transform: scale(1.4);
+    }
+  }
+}
+
+.th-map-legend.th-expanded + .th-map-legend-trigger {
+  transform: scale(0);
+  visibility: hidden;
+}
+
+@media (max-width: $break-sm) {
+  .th-map-legend + .th-map-legend-trigger {
+    left: 15px;
+    top: 15px;
+  }
+  .th-map-legend {
+    left: 6px;
+    top: 9px;
+  }
+}

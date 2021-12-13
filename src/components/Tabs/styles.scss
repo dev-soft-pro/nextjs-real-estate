@@ -1,0 +1,48 @@
+@import 'src/styles/variables/index';
+@import 'src/styles/mixins/index';
+
+.th-tabs {
+  border-bottom: 1px solid $divider;
+
+  .th-tab {
+    min-width: unset;
+    min-height: unset;
+    padding: 16px 8px;
+
+    .th-tab-content {
+      @include th-flex-row-center;
+      font-size: 14px;
+      font-weight: bold;
+      line-height: normal;
+      letter-spacing: -0.1px;
+      color: $black;
+      text-transform: none;
+
+      svg {
+        width: 20px;
+        height: 20px;
+        color: #a7a7a7;
+        margin: 0 10px 0 0;
+      }
+    }
+
+    &:not(&:last-child) {
+      margin-right: 10px;
+    }
+  }
+
+  .th-tab-selected {
+    // border-bottom: 4px solid $primary;
+
+    .th-tab-content {
+      svg {
+        color: $primary;
+      }
+    }
+  }
+
+  .th-tabs-indicator {
+    height: 4px;
+    background: $primary;
+  }
+}

@@ -1,0 +1,285 @@
+@import 'src/styles/variables/index';
+@import 'src/styles/mixins/index';
+
+.th-property-card {
+  background: #fff;
+  line-height: normal;
+  overflow: hidden;
+
+  .th-main-section {
+    background: #858585;
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+
+    .th-image-placeholder-container {
+      padding-bottom: 66%; // width / height = 1.5
+      position: relative;
+      overflow: hidden;
+
+      background: #404040;
+      color: #fff8;
+
+      .th-icon {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 42px;
+        height: 40px;
+      }
+    }
+
+    .th-overlay {
+      background-image: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.8),
+        rgba(46, 46, 46, 0.5) 15%,
+        rgba(0, 0, 0, 0) 50%,
+        rgba(46, 46, 46, 0.5) 81%,
+        rgba(0, 0, 0, 0.8)
+      );
+      pointer-events: none;
+
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      top: 0;
+    }
+
+    .th-status {
+      position: absolute;
+      top: 10px;
+      left: 15px;
+
+      .th-updated {
+        background: rgba(0, 0, 0, 0.5);
+        line-height: 1.6;
+        text-align: center;
+
+        position: absolute;
+        left: 0;
+        top: 6px;
+        height: 36px;
+        width: 100%;
+        padding: 17px 0 0;
+        margin: 0;
+      }
+    }
+
+    .th-agent-section {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      left: 112px;
+      @include th-flex-row-center;
+
+      .th-agent-avatar {
+        width: 32px;
+        height: 32px;
+        font-size: 16px;
+        overflow: hidden;
+      }
+
+      .th-agent-info {
+        flex: 1;
+        padding-right: 10px;
+        text-align: right;
+        overflow: hidden;
+
+        .th-agent-name {
+          font-size: 12px;
+          font-weight: bold;
+          letter-spacing: 0.17px;
+        }
+
+        .th-agent-company {
+          font-size: 10px;
+          letter-spacing: -0.08px;
+          font-weight: normal;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+      }
+
+      .th-contact-button {
+        flex: 0 0 auto;
+        width: 110px;
+        height: 34px;
+        border-radius: 17px;
+        background: $secondary;
+        color: white;
+        font-size: 10px;
+        @include th-flex-row-center;
+
+        svg {
+          width: 16px;
+          height: 16px;
+          margin-left: 4px;
+        }
+      }
+    }
+
+    .th-favorite-button {
+      position: absolute;
+      top: 9px;
+      right: 9px;
+      width: 30px;
+      height: 30px;
+      padding: 3px;
+
+      border-radius: 50%;
+      overflow: hidden;
+      pointer-events: auto;
+
+      &.th-selected {
+        color: #d43f51;
+      }
+
+      svg {
+        width: 24px;
+        height: 24px;
+      }
+    }
+
+    .th-prices {
+      position: absolute;
+      bottom: 10px;
+
+      &.th-left {
+        left: 15px;
+      }
+
+      &.th-right {
+        right: 15px;
+        text-align: right;
+      }
+
+      .th-price-type {
+        font-size: 11px;
+        margin-bottom: 2px;
+        @include th-flex-row-center;
+      }
+
+      .th-price {
+        font-size: 14px;
+        font-weight: bold;
+        letter-spacing: -0.08px;
+        margin-bottom: 1px;
+      }
+
+      .th-pricepersqft {
+        font-size: 11px;
+        font-weight: normal;
+      }
+    }
+  }
+
+  .th-info-section {
+    padding: 8px 15px 10px 15px;
+    position: relative;
+
+    .th-location-actions {
+      @include th-flex-row-center;
+      margin-bottom: 10px;
+
+      .th-location-button {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        color: $primary;
+        background: rgba($primary, 0.1);
+        margin-left: -6px;
+        margin-right: 6px;
+      }
+
+      .th-location {
+        flex: 1;
+      }
+
+      .th-address {
+        color: #000;
+        font-size: 14px;
+        font-weight: bold;
+        letter-spacing: -0.08px;
+        margin-bottom: 2px;
+      }
+
+      .th-region {
+        font-size: 11px;
+        font-weight: normal;
+        letter-spacing: -0.08px;
+        line-height: 1.27;
+      }
+
+      .th-actions {
+        @include th-flex-row-center;
+        margin-right: -6px;
+        color: #a7a7a7;
+        .th-action-button {
+          width: 30px;
+          height: 30px;
+          border-radius: 50%;
+        }
+      }
+    }
+
+    .th-metrics {
+      @include th-flex-row;
+      justify-content: space-between;
+
+      .th-property-info {
+        text-align: center;
+
+        .th-property-info-title {
+          color: #858585;
+          font-size: 10px;
+          font-weight: 500;
+          line-height: 1.12;
+          letter-spacing: 0.04px;
+          margin-bottom: 3px;
+        }
+
+        .th-property-info-value {
+          color: #000000;
+          font-size: 12px;
+          font-weight: 500;
+          letter-spacing: -0.2px;
+        }
+      }
+    }
+
+    .th-description {
+      height: 32px;
+      margin-top: 6px;
+
+      color: #858585;
+      font-size: 12px;
+      line-height: 1.33;
+      letter-spacing: -0.09px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .th-more {
+      position: absolute;
+      right: 0;
+      bottom: 2px;
+      padding-left: 20px;
+
+      color: $primary;
+      background: linear-gradient(to right, rgba(#fff, 0), #fff 20%);
+      font-size: 12px;
+      letter-spacing: -0.2px;
+    }
+
+    .th-mls-logo {
+      position: absolute;
+      right: 8px;
+      top: -6px;
+      height: 15px;
+    }
+  }
+}

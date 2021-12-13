@@ -1,0 +1,44 @@
+@import 'src/styles/variables/index';
+@import 'src/styles/mixins/index';
+
+.th-compare-start {
+  @include th-flex-column-center;
+
+  .th-page-title {
+    max-width: 404px;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 1.25;
+    letter-spacing: -0.13px;
+    text-align: center;
+    margin-top: 60px;
+  }
+
+  .th-page-description {
+    max-width: 374px;
+    font-size: 14px;
+    line-height: 1.29;
+    letter-spacing: -0.23px;
+    text-align: center;
+    color: #858585;
+    margin: 30px 0;
+  }
+
+  .th-geo-search {
+    width: 570px;
+    max-width: 100%;
+    margin-bottom: 46px;
+  }
+
+  .th-intro-video-container {
+    width: 570px;
+    max-width: 100%;
+    margin-top: 50px;
+  }
+
+  @media (max-width: $break-sm) {
+    .th-page-title {
+      margin-top: 30px;
+    }
+  }
+}

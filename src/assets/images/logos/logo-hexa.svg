@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="868" height="982" viewBox="0 0 868 982">
+    <defs>
+        <linearGradient id="logo-hexa-b" x1="97.627%" x2="1.57%" y1="50%" y2="50%">
+            <stop offset="0%" stop-color="#465FF5"/>
+            <stop offset="100%" stop-color="#6E4EF6"/>
+        </linearGradient>
+        <path id="logo-hexa-a" d="M532 18.475l369.013 213.05a64 64 0 0 1 32 55.425v426.1a64 64 0 0 1-32 55.425L532 981.525a64 64 0 0 1-64 0L98.987 768.475a64 64 0 0 1-32-55.425v-426.1a64 64 0 0 1 32-55.425L468 18.475a64 64 0 0 1 64 0z"/>
+    </defs>
+    <g fill="none" fill-rule="evenodd" transform="translate(-66 -9)">
+        <mask id="logo-hexa-c" fill="#fff">
+            <use xlink:href="#logo-hexa-a"/>
+        </mask>
+        <use fill="url(#logo-hexa-b)" xlink:href="#logo-hexa-a"/>
+        <g fill="url(#logo-hexa-b)" mask="url(#logo-hexa-c)">
+            <path d="M-12-12h1024v1024H-12z"/>
+        </g>
+        <path fill="#FFF" fill-rule="nonzero" d="M314 354v-83h372v83H314zm235 0v375h-97V449.62L549 354z" mask="url(#logo-hexa-c)"/>
+    </g>
+</svg>

@@ -1,0 +1,19 @@
+@mixin th-close-button {
+  position: absolute;
+  color: #888;
+
+  &:hover {
+    color: #666;
+  }
+  cursor: pointer;
+}
+
+@mixin th-panel {
+  border-radius: 4px;
+  box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.2);
+}
+
+@mixin th-dark-panel {
+  @include th-panel;
+  background-color: rgba(0, 0, 0, 0.8);
+}

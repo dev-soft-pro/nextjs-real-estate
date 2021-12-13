@@ -1,0 +1,77 @@
+@import 'src/styles/variables/index';
+
+.th-settings {
+  padding: 16px;
+
+  .th-page-title {
+    font-size: 27px;
+    font-weight: 600;
+    padding: 12px 0;
+  }
+
+  .th-page-content {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .th-nav-bar {
+    display: flex;
+    flex-direction: column;
+    padding: 16px 0;
+    width: 200px;
+
+    .th-nav-item {
+      color: #1f3349;
+      font-size: 16px;
+      font-weight: 300;
+      margin-bottom: 16px;
+
+      &:hover {
+        text-decoration: none;
+      }
+
+      &.th-active {
+        color: #6651f5;
+        font-weight: bold;
+      }
+    }
+  }
+
+  .th-sub-pages {
+    flex: 1;
+    padding: 12px 0;
+
+    .th-sub-page {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 8px 24px 4px rgba(0, 0, 0, 0.05);
+
+      @media (max-width: $break-sm) {
+        box-shadow: none;
+        padding: 0 8px;
+      }
+    }
+
+    .th-sub-page-title {
+      font-size: 25px;
+      font-weight: bold;
+      margin: 8px 0;
+    }
+  }
+
+  @media (max-width: $break-lg) {
+    .th-page-content {
+      flex-direction: column;
+    }
+
+    .th-nav-bar {
+      flex-direction: row;
+      width: unset;
+
+      .th-nav-item {
+        margin-bottom: 0px;
+        margin-right: 24px;
+      }
+    }
+  }
+}

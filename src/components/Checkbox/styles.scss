@@ -1,0 +1,17 @@
+.th-checkbox {
+  .th-check {
+    svg {
+      color: #6651f5;
+      width: 21px;
+    }
+  }
+}
+
+.th-checkbox.th-disabled {
+  .th-check {
+    svg {
+      color: rgba(0, 0, 0, 0.38);
+      width: 21px;
+    }
+  }
+}

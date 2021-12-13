@@ -1,0 +1,141 @@
+@import 'src/styles/variables/index';
+@import 'src/styles/mixins/index';
+
+.th-compare-header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: $search-bar-height;
+
+  background: #fff;
+  border-bottom: 1px solid #eee;
+  padding: 0 15px;
+  z-index: 10;
+
+  @include th-flex-row-center;
+
+  .th-geo-search {
+    flex: 0 0 auto;
+  }
+
+  @media (min-width: $break-sm) {
+    .th-geo-search {
+      width: 350px;
+    }
+  }
+
+  .th-options-container {
+    flex: 1;
+    padding: 0 8px;
+    @include th-flex-row-center;
+    justify-content: flex-end;
+  }
+
+  .th-filter-option {
+    .th-checkbox {
+      margin: 0;
+      .th-check {
+        width: 32px;
+        height: 32px;
+        margin: 0 16px 0 8px;
+      }
+
+      .th-checkbox-label {
+        font-size: 12px;
+        font-weight: normal;
+        letter-spacing: -0.2px;
+        color: #858585;
+      }
+    }
+
+    // label and input
+    .th-label {
+      font-size: 12px;
+      font-weight: normal;
+      line-height: 1.33;
+      letter-spacing: -0.2px;
+    }
+
+    .th-input {
+      width: 100%;
+      border-radius: 4px;
+      border: 1px solid #eee;
+      font-size: 12px;
+      font-weight: normal;
+      letter-spacing: -0.2px;
+      color: black;
+      padding: 10px 16px;
+      text-align: center;
+    }
+
+    .th-type-option {
+      @include th-flex-row;
+      flex-wrap: wrap;
+
+      .th-checkbox {
+        flex: 1 1 50%;
+      }
+
+      .th-close-date {
+        width: 100%;
+
+        label {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+
+  .th-actions {
+    @include th-flex-row;
+
+    .th-action-button {
+      &:not(:last-child) {
+        margin-right: 10px;
+      }
+
+      height: 42px;
+      padding: 0 20px;
+      justify-content: space-between;
+      white-space: nowrap;
+      background-color: #a7a7a7;
+      font-size: 12px;
+      font-weight: 600;
+      line-height: 1;
+      letter-spacing: -0.2px;
+      text-align: center;
+      color: #ffffff;
+      border-radius: 4px;
+
+      .th-icon {
+        width: 20px;
+        height: 20px;
+        margin-left: 4px;
+      }
+    }
+  }
+
+  @media (max-width: $break-sm) {
+    padding: 0;
+
+    .th-geo-search {
+      flex: 1;
+    }
+
+    .th-options-container {
+      flex: 0 0 auto;
+      padding: 0;
+
+      .th-filter-list-option {
+        margin: 0 0 0 6px;
+      }
+    }
+  }
+
+  @media (max-width: 640px) {
+    .th-actions {
+      display: none;
+    }
+  }
+}

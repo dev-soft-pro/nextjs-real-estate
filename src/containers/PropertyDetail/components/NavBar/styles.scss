@@ -1,0 +1,40 @@
+@import 'src/styles/variables/index';
+
+.th-navs-bar {
+  position: sticky;
+  top: 140px;
+  background: white;
+  box-shadow: 0 2px 2px 0 rgba(233, 233, 233, 0.5);
+  padding: 0 30px;
+  transition: top 0.3s;
+  z-index: 20;
+
+  .th-tabs {
+    border: none;
+  }
+
+  .th-tab {
+    padding: 0;
+    .th-tab-content {
+      font-weight: normal;
+    }
+  }
+
+  .th-nav-item {
+    display: inline-block;
+    padding: 16px 8px;
+  }
+}
+
+.th-property-detail.th-break-sm {
+  .th-navs-bar {
+    top: 160px;
+    padding: 0 10px;
+  }
+}
+
+.th-property-detail.th-page-mode.th-break-sm {
+  .th-navs-bar {
+    top: $header-height + $search-bar-height + 160px;
+  }
+}

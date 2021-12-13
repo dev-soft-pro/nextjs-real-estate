@@ -1,0 +1,23 @@
+@import 'src/styles/variables/index';
+
+.th-agent-section {
+  .th-agent-info {
+    flex: 1;
+  }
+
+  .th-request-info-button {
+    background: $secondary;
+    border-radius: 16px;
+    color: white;
+    font-size: 12px;
+    font-weight: 500;
+    height: 32px;
+    padding: 0 16px;
+
+    svg {
+      width: 18px;
+      height: 18px;
+      margin-right: 4px;
+    }
+  }
+}

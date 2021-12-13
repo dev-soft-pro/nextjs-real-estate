@@ -1,0 +1,85 @@
+@import 'src/styles/variables/index';
+@import 'src/styles/mixins/index';
+
+.th-compare-chart {
+  position: relative;
+  user-select: none;
+
+  .th-chart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .th-date-option {
+      width: 36px;
+      height: 24px;
+      border-radius: 4px;
+      font-size: 12px;
+      font-weight: 500px;
+
+      &.th-selected {
+        background: $primary;
+        color: $white;
+      }
+    }
+  }
+
+  .th-chart-content {
+    display: flex;
+    flex-direction: row;
+
+    .th-compare-linechart {
+      flex: 1;
+    }
+  }
+
+  .th-metrics {
+    min-width: 150px;
+    @include th-flex-column;
+    padding: 8px 0;
+  }
+
+  .th-checkbox {
+    margin: 0;
+
+    .th-checkbox-label {
+      font-size: 14px;
+    }
+
+    .th-check {
+      padding: 6px 9px 6px;
+    }
+  }
+
+  &.th-small {
+    .th-chart-header {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .th-chart-content {
+      flex-direction: column;
+
+      .th-select {
+        width: 130px;
+        margin-bottom: 8px;
+        &:not(&:last-child) {
+          margin-right: 8px;
+        }
+      }
+    }
+
+    .th-metrics {
+      flex-direction: row;
+    }
+
+    .th-date-options {
+      margin: 8px 0;
+      white-space: nowrap;
+
+      .th-date-option {
+        width: 40px;
+      }
+    }
+  }
+}

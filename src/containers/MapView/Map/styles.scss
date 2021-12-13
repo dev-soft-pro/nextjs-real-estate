@@ -1,0 +1,91 @@
+@import 'src/styles/variables/index';
+@import 'src/styles/mixins/index';
+
+.th-map-container {
+  .th-preview-container {
+    &,
+    * {
+      pointer-events: none;
+    }
+
+    .mapboxgl-popup-tip {
+      border-width: 5px;
+      pointer-events: none;
+    }
+
+    .mapboxgl-popup-content {
+      box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.2);
+      background: transparent;
+      overflow: visible;
+      padding: 0;
+      position: relative;
+    }
+
+    .th-property-card-wrapper {
+      border-radius: 4px;
+      overflow: hidden;
+      width: 270px;
+      height: 258px;
+
+      .th-property-card {
+        width: 300px;
+        transform: scale(0.9);
+        transform-origin: top left;
+
+        .th-info-section {
+          height: 127px;
+        }
+      }
+    }
+  }
+
+  .th-property-preview-container {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    background: #eeeeee;
+    box-shadow: 0 -4px 15px 0 rgba(0, 0, 0, 0.2);
+    z-index: 90;
+
+    .th-property-card {
+      width: 100%;
+      margin: auto;
+
+      .th-swipable-carousel-container,
+      .th-image-placeholder-container {
+        padding-bottom: 200px;
+      }
+
+      .th-like-button {
+        right: 27px;
+      }
+    }
+
+    .th-property-card-placeholder {
+      .th-info-section {
+        height: 89px;
+      }
+    }
+  }
+
+  .th-preview-container,
+  .th-property-preview-container {
+    .th-close-button {
+      pointer-events: auto;
+      position: absolute;
+      right: 2px;
+      top: -12px;
+      background: white;
+      border-radius: 50%;
+      padding: 3px;
+      box-shadow: 0px -1px 4px rgba(0, 0, 0, 0.2);
+
+      svg {
+        width: 18px;
+        height: 18px;
+      }
+    }
+  }
+}

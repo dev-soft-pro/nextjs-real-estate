@@ -1,0 +1,18 @@
+@import 'src/styles/variables/index';
+
+.th-change-password {
+  padding: 36px 64px;
+  position: relative;
+
+  .th-save-button {
+    background-image: linear-gradient(to left, #465ff5, #6e4ef6);
+    border-radius: 4px;
+    color: white;
+    font-size: 14px;
+    padding: 6px 20px;
+  }
+
+  @media (max-width: $break-sm) {
+    padding: 18px 24px;
+  }
+}

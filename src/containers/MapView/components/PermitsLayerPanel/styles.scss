@@ -1,0 +1,124 @@
+.th-permits-layer-panel {
+  .th-panel-title {
+    font-size: 12px;
+    font-weight: bold;
+    line-height: normal;
+    letter-spacing: -0.1px;
+    color: #000000;
+    margin-bottom: 6px;
+  }
+
+  .th-panel-description {
+    font-size: 12px;
+    font-weight: normal;
+    line-height: 1.33;
+    letter-spacing: -0.1px;
+    color: #858585;
+  }
+
+  .th-permits-types {
+    display: flex;
+    flex-direction: row;
+
+    .th-permits-type {
+      flex: 1;
+      margin-bottom: 0;
+
+      .th-radio-label {
+        color: white;
+        font-size: 12px !important;
+      }
+
+      svg {
+        color: white;
+      }
+    }
+  }
+
+  .th-permits-years {
+    border: 1px solid #eeeeee;
+    border-radius: 4px;
+    height: 42px;
+    position: relative;
+
+    .th-permits-years-title {
+      font-size: 9px;
+      font-weight: 500;
+      line-height: 1.24;
+      letter-spacing: 0px;
+      color: #858585;
+      position: absolute;
+      top: 6px;
+      left: 20px;
+    }
+
+    .th-permits-years-suffix,
+    .th-permits-years-input {
+      font-size: 12px;
+      font-weight: normal;
+      line-height: 1.33;
+      letter-spacing: -0.1px;
+      color: #858585;
+    }
+
+    .th-permits-years-suffix {
+      position: absolute;
+      right: 20px;
+      bottom: 6px;
+    }
+
+    .th-permits-years-input {
+      position: absolute;
+      left: 20px;
+      bottom: 3px;
+      width: 142px;
+      border: none;
+      background: transparent;
+      color: white;
+    }
+  }
+
+  .th-option-container {
+    padding: 8px 0;
+
+    &:not(:last-child) {
+      border-bottom: 1px solid #eee;
+    }
+
+    .th-select {
+      width: 100%;
+      border: 1px solid #eee;
+
+      .th-select-input {
+        font-size: 12px;
+        font-weight: normal;
+        letter-spacing: -0.1px;
+        color: white;
+        padding: 10px 20px;
+      }
+    }
+
+    .th-checkbox {
+      margin: 4px 0;
+
+      .th-check {
+        width: 21px;
+        height: 21px;
+        margin-right: 10px;
+
+        svg {
+          color: white;
+        }
+      }
+
+      .th-checkbox-label {
+        font-size: 12px;
+        font-weight: bold;
+        line-height: normal;
+        letter-spacing: -0.1px;
+        color: white;
+      }
+    }
+    padding-bottom: 12px;
+  }
+}

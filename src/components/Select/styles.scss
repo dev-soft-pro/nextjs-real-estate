@@ -1,0 +1,36 @@
+@import 'src/styles/variables/index';
+
+.th-input-container {
+  .th-select {
+    flex: 1 0 auto;
+    border: 1px solid $input-border;
+    border-radius: 4px;
+    color: $text;
+    overflow: hidden;
+    padding: 0;
+
+    svg {
+      right: 4px;
+    }
+
+    .th-select-input {
+      box-sizing: border-box;
+      height: 100%;
+      padding: 8px 24px 8px 12px;
+      font-size: 14px;
+    }
+  }
+
+  .th-input-label {
+    color: $label;
+    font-size: 12px;
+  }
+}
+
+.th-select-option {
+  font-size: 14px !important;
+  line-height: 1.71;
+  letter-spacing: 0.3px;
+  color: $text;
+  padding: 6px 12px !important;
+}

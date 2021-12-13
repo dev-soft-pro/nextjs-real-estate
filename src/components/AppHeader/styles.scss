@@ -1,0 +1,107 @@
+@import 'src/styles/variables/index';
+@import 'src/styles/mixins/index';
+
+$hamburger-layer-color: #fff;
+$hamburger-layer-width: 18px;
+$hamburger-layer-spacing: 4px;
+$hamburger-layer-height: 2px;
+$hamburger-hover-opacity: 1;
+$hamburger-layer-border-radius: 1px;
+$hamburger-padding-y: 0;
+$hamburger-padding-x: 0;
+
+@import 'node_modules/hamburgers/_sass/hamburgers/hamburgers.scss';
+
+$button-width: 42px;
+
+.th-app-header {
+  @include th-flex-row-center;
+  height: $app-header-height;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  background: $header;
+  color: white;
+  transition: transform 0.3s;
+  z-index: 101;
+
+  .th-back-button {
+    height: 100%;
+    width: $button-width;
+  }
+
+  .th-menu-button {
+    @include th-flex-center;
+    height: 100%;
+  }
+
+  .th-logo {
+    margin-left: 20px;
+  }
+
+  .th-company-logo {
+    margin-left: 20px;
+    object-fit: contain;
+    height: calc(100% - 20px);
+    max-width: 150px;
+  }
+
+  .th-actions {
+    margin-left: auto;
+    @include th-flex-row-center;
+
+    .th-drop-menu:not(.th-drop-menu-mobile):hover .th-menu-item,
+    .th-drop-menu.th-drop-menu-mobile.th-expanded .th-menu-item,
+    .th-menu-item:hover {
+      background-color: unset;
+      box-shadow: unset;
+    }
+
+    .th-action {
+      flex: 0 0 auto;
+      position: relative;
+
+      &:not(:last-child)::after {
+        content: '';
+        position: absolute;
+        width: 1px;
+        height: 32px;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+        background: #595959;
+      }
+    }
+
+    .th-help-button {
+      @include th-flex-center;
+      width: $button-width;
+      height: 40px;
+      padding: 0;
+      margin: 0;
+    }
+
+    .th-avatar {
+      margin: 0 8px;
+    }
+
+    .th-drop-menu-content {
+      left: unset;
+      right: 0;
+      margin-top: 3px;
+    }
+  }
+}
+
+@media (max-width: $break-sm) {
+  body:not(.th-mapview-showed):not(.th-filters-showed),
+  body.th-mapview-showed.th-sider-showed {
+    .th-scrolled-down {
+      .th-app-header {
+        transform: translateY(-$app-header-height);
+      }
+    }
+  }
+}

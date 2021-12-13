@@ -1,0 +1,32 @@
+.th-popover {
+  position: fixed;
+  transform: scale(0);
+  visibility: hidden;
+  transition: transform 0.3s, max-height 0.3s, visibility 0.3s;
+  pointer-events: none;
+
+  box-shadow: 0 8px 24px 0 rgba(0, 0, 0, 0.05);
+  z-index: 99;
+
+  .th-triangle-up {
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 8px solid rgb(255, 255, 255);
+  }
+
+  .th-triangle-down {
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 8px solid rgb(255, 255, 255);
+  }
+
+  &.th-popover--expanded {
+    transform: scale(1);
+    visibility: visible;
+    pointer-events: auto;
+  }
+}

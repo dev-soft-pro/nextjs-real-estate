@@ -1,0 +1,70 @@
+@import 'src/styles/variables/index';
+
+.th-property-detail .th-page-header {
+  width: 100%;
+  height: 60px;
+
+  position: sticky;
+  top: 0;
+
+  background: white;
+  // box-shadow: 0 1px 2px 0 rgba(233, 233, 233, 0.5);
+  transition: top 0.3s;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  z-index: 99;
+
+  .th-back-button {
+    flex: 0 0 auto;
+    height: 100%;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: -0.2px;
+    color: #858585;
+    padding: 0 24px;
+    background: white;
+    span {
+      padding: 0 16px;
+    }
+  }
+
+  .th-geo-search-container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+
+    padding-right: 12px;
+
+    .th-geo-search {
+      flex: 1;
+
+      .th-geo-input {
+        font-size: 14px;
+      }
+
+      .th-geo-input::placeholder {
+        font-size: 12px;
+      }
+
+      @media (max-width: $break-sm) {
+        .th-geo-input {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}
+
+.th-property-detail.th-break-lg .th-page-header {
+  .th-back-button {
+    padding: 0 16px;
+    margin-right: 8px;
+    span {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,19 @@
+.th-feedback-modal {
+  width: 600px;
+
+  .th-modal-title {
+    font-size: 27px;
+    margin-bottom: 16px;
+  }
+
+  .th-send-button {
+    border: 1px solid #a4e266;
+    background-image: linear-gradient(to right, #8ed24b, #a4e266);
+    border-radius: 4px;
+    padding: 6px 20px;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    float: right;
+  }
+}

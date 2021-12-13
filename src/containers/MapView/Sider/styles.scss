@@ -1,0 +1,64 @@
+@import 'src/styles/variables/index';
+@import 'src/styles/mixins/index';
+
+.th-sider {
+  position: absolute;
+  width: $sider-width;
+  top: $search-bar-height;
+  left: 0;
+  bottom: 0;
+
+  background: $white;
+  box-shadow: 0 5px 40px 0 rgba(0, 0, 0, 0.2);
+
+  @include th-flex-column;
+  transition: transform 0.3s;
+
+  z-index: 9;
+
+  &.th-wide {
+    width: $sider-wide-width;
+  }
+
+  &.th-hide {
+    transform: translateX(-100%);
+  }
+
+  .th-toggler {
+    background: white;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+    border-left: 1px solid #eee;
+    box-shadow: 0 5px 40px 0 rgba(0, 0, 0, 0.2);
+
+    @include th-flex-center;
+
+    position: absolute;
+    top: 20px;
+    left: 100%;
+
+    width: 30px;
+    height: 30px;
+
+    transition: left 0.3s;
+
+    @each $dir, $bDir in (left: right, right: left) {
+      .th-arrow-#{$dir} {
+        width: 0;
+        height: 0;
+        border-top: 5px solid transparent;
+        border-bottom: 5px solid transparent;
+        border-#{$bDir}: 5px solid black;
+      }
+    }
+  }
+
+  @media (max-width: $break-sm) {
+    width: 100%;
+    height: unset;
+
+    .th-toggler {
+      display: none;
+    }
+  }
+}

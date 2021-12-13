@@ -1,0 +1,25 @@
+@import 'src/styles/variables/index';
+
+.th-remove-boundary {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 110px;
+
+  @media (max-width: $break-sm) {
+    bottom: 68px;
+  }
+
+  z-index: 70;
+
+  .th-remove-boundary-button {
+    box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.2);
+    background-image: $primary-gradient;
+    background-color: $primary;
+    color: white;
+    font-size: 12px;
+    font-weight: normal;
+    padding: 4px 16px;
+    border-radius: 16px;
+  }
+}

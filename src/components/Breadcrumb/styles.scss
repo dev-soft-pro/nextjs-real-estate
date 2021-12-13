@@ -1,0 +1,21 @@
+.th-breadcrumb {
+  font-size: 12px;
+  letter-spacing: -0.2px;
+  color: #858585;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  .th-icon {
+    margin-right: 12px;
+  }
+
+  .th-breadcrumb-item a {
+    color: #858585;
+  }
+
+  .th-breadcrumb-item:not(:last-child)::after {
+    content: ' > ';
+    margin: 8px;
+  }
+}

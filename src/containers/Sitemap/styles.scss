@@ -1,0 +1,57 @@
+@import 'src/styles/variables/index';
+
+.th-sitemap {
+  .th-title {
+    font-size: 38px;
+    margin: 16px 0;
+  }
+
+  .th-geo-search {
+    max-width: 360px;
+    margin: 12px 0;
+  }
+
+  .th-links {
+    padding: 16px 0;
+    ul {
+      columns: 3;
+      column-fill: balance;
+      list-style-type: none;
+      padding: 0px;
+    }
+
+    li {
+      display: inline-block;
+      padding: 3px;
+      width: 100%;
+    }
+
+    a {
+      color: #666666;
+    }
+  }
+
+  @media (max-width: $break-lg) {
+    .th-links {
+      ul {
+        columns: 2;
+      }
+    }
+  }
+
+  @media (max-width: $break-sm) {
+    .th-title {
+      font-size: 24px;
+    }
+
+    .th-geo-search {
+      width: 100%;
+    }
+
+    .th-links {
+      ul {
+        columns: 1;
+      }
+    }
+  }
+}

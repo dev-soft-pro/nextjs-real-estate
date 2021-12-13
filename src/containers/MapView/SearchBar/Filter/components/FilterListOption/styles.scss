@@ -1,0 +1,154 @@
+@import 'src/styles/variables/index';
+@import 'src/styles/mixins/index';
+
+.th-filter-list-option {
+  .th-option-content {
+    padding: 0;
+    overflow-y: auto;
+
+    position: fixed;
+    top: 53px;
+    right: 0;
+    bottom: 0;
+    width: 400px;
+    max-width: 100%;
+    transform-origin: top;
+  }
+
+  .th-filter-option {
+    margin: 0;
+
+    > .th-option {
+      box-shadow: none;
+      height: 50px;
+      background: #fafafa;
+      border: none;
+      border-radius: 0;
+
+      > div {
+        overflow: hidden;
+      }
+
+      &::after {
+        display: none;
+      }
+
+      .th-content {
+        flex: 1;
+      }
+
+      .th-title {
+        color: #000;
+      }
+
+      .th-expand-icon {
+        color: #a7a7a7;
+      }
+
+      .th-option-actions {
+        flex-direction: row;
+        justify-content: center;
+
+        .th-clear-button {
+          position: unset;
+          font-size: 12px;
+          margin-right: 4px;
+        }
+
+        .th-clear-button + .th-expand-icon {
+          margin: 0;
+        }
+      }
+
+      .th-selected-value {
+        max-width: unset;
+      }
+    }
+
+    &.th-active {
+      > .th-option {
+        .th-title {
+          color: $primary;
+        }
+      }
+    }
+
+    .th-popover {
+      position: relative;
+      top: 0;
+      height: 0;
+      width: 100%;
+
+      padding: 0;
+      margin-top: -1px;
+      border-radius: 0px;
+      box-shadow: none;
+      transform: scale(1, 0);
+      transition: none;
+
+      &.th-popover--expanded {
+        padding: 18px 10px;
+        transform: scale(1, 1);
+        height: unset;
+      }
+    }
+  }
+
+  .th-filter-option.th-active {
+    > .th-option {
+      border-color: #eee;
+
+      &::after {
+        border-color: #eee;
+      }
+    }
+
+    .th-popover {
+      border-color: #eee;
+    }
+  }
+
+  .th-more-header {
+    flex: 0 0 auto;
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.2);
+    @include th-flex-row-center;
+    justify-content: space-between;
+    padding: 8px;
+    z-index: 9999;
+
+    .th-clear-all-button {
+      border-radius: 4px;
+      font-size: 12px;
+      padding: 4px 12px;
+      margin-right: 8px;
+      text-decoration: underline;
+    }
+
+    .th-header-title {
+      flex: 1;
+      color: rgba(0, 0, 0, 0.85);
+      font-size: 16px;
+      font-weight: 500;
+      margin: 0 4px;
+    }
+
+    .th-close-button {
+      flex: 0 0 auto;
+      background-image: $primary-gradient;
+      border-radius: 4px;
+      color: white;
+      font-size: 12px;
+      padding: 4px 8px;
+    }
+  }
+
+  @media (max-width: $break-sm) {
+    input {
+      font-size: 16px !important;
+    }
+
+    input::placeholder {
+      font-size: 14px;
+    }
+  }
+}

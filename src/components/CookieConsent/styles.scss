@@ -1,0 +1,48 @@
+@import 'src/styles/variables/index';
+@import 'src/styles/mixins/index';
+
+.th-cookie-container {
+  position: fixed;
+  left: 0;
+  @include th-flex-row-center;
+
+  background: #383c43;
+  color: white;
+  font-size: 14px;
+  line-height: 18px;
+  padding: 11px 32px;
+  text-align: center;
+  width: 100%;
+  z-index: 999;
+
+  .th-cookie-button {
+    background: transparent;
+    border: 1px solid #9e9e9e;
+    border-radius: 3px;
+    color: white;
+    cursor: pointer;
+    flex: 0 0 auto;
+    padding: 6px 27px;
+    margin-left: 8px;
+  }
+
+  .th-cookie-content {
+    flex: 1 1 0%;
+  }
+
+  .th-cookie-content-link {
+    opacity: 1;
+    display: inline-block;
+    text-decoration: underline;
+    padding: 0.2em;
+    color: white;
+  }
+
+  @media (max-width: $break-sm) {
+    flex-direction: column;
+
+    .th-cookie-button {
+      margin-top: 8px;
+    }
+  }
+}

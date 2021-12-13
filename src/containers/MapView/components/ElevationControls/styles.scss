@@ -1,0 +1,84 @@
+@import 'src/styles/variables/index';
+@import 'src/styles/mixins/index';
+
+.th-exit-topography-button {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 10px;
+  z-index: 70;
+
+  box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.2);
+  background-image: $primary-gradient;
+  background-color: $primary;
+  color: white !important;
+  font-size: 12px;
+  font-weight: normal;
+  padding: 4px 16px !important;
+  border-radius: 16px !important;
+}
+
+.th-elevation-wrapper {
+  position: absolute;
+  right: 15px;
+  bottom: 190px;
+
+  .th-auth-lock {
+    .th-icon {
+      margin-bottom: 0;
+      padding: 12px 12px 24px 12px;
+      width: 100%;
+      height: 100%;
+    }
+    .th-unlock-button {
+      display: none;
+    }
+    z-index: 71;
+  }
+}
+
+.th-elevation-button {
+  width: 60px;
+  height: 60px;
+
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  border-radius: 8px;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+  z-index: 70;
+
+  .th-icon {
+    width: 100%;
+    height: 100%;
+  }
+
+  .th-title {
+    background: black;
+    color: white;
+    font-size: 9px;
+    height: 19px;
+
+    @include th-flex-center;
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+
+    z-index: 1;
+  }
+}
+
+.th-elevation-button.th-active {
+  .th-title {
+    background: $secondary;
+  }
+}
+
+@media (max-width: $break-sm) {
+  .th-elevation-wrapper {
+    bottom: 212px;
+    right: 10px;
+  }
+}

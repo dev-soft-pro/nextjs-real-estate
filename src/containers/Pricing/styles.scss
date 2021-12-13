@@ -1,0 +1,445 @@
+@import 'src/styles/variables/index';
+@import 'src/styles/mixins/index';
+@import 'node_modules/slick-carousel/slick/slick.scss';
+@import 'node_modules/slick-carousel/slick/slick-theme.scss';
+
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 300;
+  src: url('/fonts/poppins/Poppins-Light.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/fonts/poppins/Poppins-Regular.ttf') format('truetype');
+}
+
+// @font-face {
+//   font-family: 'Poppins';
+//   font-style: normal;
+//   font-weight: 500;
+//   src: url('/fonts/poppins/Poppins-Medium.ttf') format('truetype');
+// }
+
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 600;
+  src: url('/fonts/poppins/Poppins-SemiBold.ttf') format('truetype');
+}
+
+$plan-feature-width: 190px;
+$plan-title-width: 410px;
+
+.th-pricing {
+  @include th-flex-column-center;
+
+  min-height: calc(100vh - #{$header-height});
+  padding: 32px 0;
+  position: relative;
+
+  * {
+    font-family: Poppins;
+  }
+
+  .th-page-title {
+    width: 652px;
+    font-size: 44px;
+    font-weight: 300;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.09;
+    letter-spacing: -0.73px;
+    text-align: center;
+    color: #000000;
+    margin-top: 80px;
+  }
+
+  .th-page-description {
+    font-size: 20px;
+    font-weight: 300;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.4;
+    letter-spacing: -0.33px;
+    text-align: center;
+    color: #595959;
+    margin-top: 20px;
+  }
+
+  .th-try-free-button {
+    width: 200px;
+    height: 50px;
+    border-radius: 25px;
+    background: #20cb4c;
+    font-size: 13px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.23;
+    letter-spacing: -0.38px;
+    color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 15px 0 30px;
+    margin-top: 25px;
+
+    svg {
+      width: 26px;
+      height: 26px;
+      border: 2px solid white;
+      border-radius: 50%;
+    }
+  }
+
+  .th-period-picker {
+    margin-top: 40px;
+    margin-bottom: 20px;
+    white-space: nowrap;
+
+    .th-period {
+      color: #333;
+      padding: 4px;
+    }
+
+    .th-period.th-selected {
+      color: $primary;
+    }
+  }
+
+  @media (max-width: $break-md) {
+    .th-page-title {
+      width: 90%;
+      margin-top: 40px;
+      font-size: 40px;
+    }
+
+    .th-page-description {
+      width: 90%;
+      font-size: 18px;
+    }
+  }
+
+  @media (max-width: $break-sm) {
+    .th-page-title {
+      margin-top: 30px;
+      font-size: 32px;
+    }
+
+    .th-page-description {
+      width: 90%;
+      font-size: 16px;
+    }
+  }
+
+  .th-plan-background {
+    position: absolute;
+    top: 480px;
+    left: 0;
+    right: 0;
+    height: 1400px;
+    background: #f7fcff;
+    z-index: -1;
+
+    @media (max-width: 1080px) {
+      height: unset;
+      bottom: 0;
+    }
+  }
+
+  .th-plan-headers {
+    @include th-flex-row;
+    align-items: flex-end;
+
+    .th-headers-description {
+      width: $plan-title-width;
+      height: 180px;
+      padding: 56px 30px;
+      font-size: 34px;
+      font-weight: 300;
+      line-height: 1.12;
+      letter-spacing: -0.23px;
+      color: #000000;
+
+      @media (max-width: 1200px) {
+        width: 300px;
+      }
+    }
+  }
+
+  .th-plan-features {
+    background: white;
+    box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.15);
+    position: relative;
+
+    .th-recommended-features-block {
+      position: absolute;
+      box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.15);
+      left: $plan-feature-width + $plan-title-width;
+      top: 0;
+      bottom: 0;
+      width: $plan-feature-width;
+
+      @media (max-width: 1200px) {
+        left: $plan-feature-width + 300px;
+      }
+    }
+
+    .th-feature {
+      @include th-flex-row-center;
+      height: 46px;
+
+      .th-feature-tooltip {
+        cursor: pointer;
+        font-size: 18px;
+        margin-left: 8px;
+        line-height: 1;
+      }
+
+      .th-title {
+        @include th-flex-row-center;
+        width: $plan-title-width;
+        height: 100%;
+        font-size: 14px;
+        line-height: 3.14;
+        letter-spacing: -0.23px;
+        color: #858585;
+        padding-left: 30px;
+        border-right: solid 1px #eeeeee;
+
+        @media (max-width: 1200px) {
+          width: 300px;
+        }
+      }
+
+      .th-plan-feature {
+        width: $plan-feature-width;
+        height: 100%;
+        text-align: center;
+        @include th-flex-center;
+
+        &:last-child {
+          border-left: solid 1px #eeeeee;
+        }
+
+        .th-check-icon {
+          color: $primary;
+        }
+
+        .th-close-icon {
+          color: #858585;
+          width: 21px;
+          height: 21px;
+        }
+      }
+    }
+
+    .th-feature-header {
+      background: #f7fcff;
+    }
+
+    .th-feature-header + .th-feature {
+      height: 64px;
+      .th-title,
+      .th-plan-feature {
+        padding-top: 16px;
+      }
+    }
+
+    .th-feature:last-child {
+      height: 64px;
+      .th-title,
+      .th-plan-feature {
+        padding-bottom: 16px;
+      }
+    }
+  }
+
+  .th-faq {
+    margin-top: 48px;
+    padding: 0 24px;
+
+    @media (max-width: $break-sm) {
+      padding: 0;
+    }
+  }
+}
+
+.th-pricing .th-plan-info {
+  @include th-flex-column-center;
+  width: $plan-feature-width;
+  height: 340px;
+  color: #ffffff;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  padding: 0 20px 25px 20px;
+
+  @media (min-width: 1080px) {
+    &.th-recommended {
+      padding: 13px 20px 25px 20px;
+      box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.15);
+      height: 360px;
+    }
+  }
+
+  .th-plan-role {
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: -0.23px;
+    margin-top: 12px;
+    text-transform: capitalize;
+  }
+
+  .th-price {
+    font-size: 34px;
+    font-weight: 300;
+    line-height: 1.12;
+    letter-spacing: -0.23px;
+    margin-top: 28px;
+  }
+
+  .th-price-unit {
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: -0.23px;
+    margin-top: 3px;
+  }
+
+  .th-period {
+    font-size: 14px;
+    line-height: 1.43;
+    letter-spacing: -0.23px;
+    margin-top: 12px;
+  }
+
+  .th-description {
+    font-size: 16px;
+    text-align: center;
+
+    @media (min-width: 1080px) {
+      font-size: 14px;
+      line-height: 14px;
+      margin-top: 12px;
+    }
+  }
+
+  .th-features {
+    margin-top: auto;
+    width: 100%;
+    height: 115px;
+    p {
+      margin: 0 -4px 6px -4px;
+      font-size: 13px;
+      font-weight: bold;
+      letter-spacing: -0.3px;
+    }
+
+    ul {
+      padding: 0 0 0 10px;
+      font-size: 12px;
+    }
+  }
+
+  .th-select-button,
+  .th-cancel-button {
+    height: 42px;
+    width: 160px;
+
+    background: white;
+    border-radius: 18px;
+    color: #061c68;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: -0.2px;
+    text-align: center;
+    margin-bottom: 0px;
+    // margin-top: auto;
+  }
+
+  .th-cancel-button {
+    color: $error;
+  }
+
+  &.th-enterprise-plan {
+    background: #6651f5;
+
+    .th-description {
+      font-size: 12px;
+      line-height: 1.33;
+      letter-spacing: -0.2px;
+      text-align: center;
+      color: #ffffff;
+      margin-top: 50px;
+    }
+
+    .th-select-button {
+      background: #20cb4c;
+      color: white;
+    }
+  }
+}
+
+.th-pricing .th-plan-slider {
+  width: calc(100% - 20px);
+  margin: auto 10px;
+  overflow: hidden;
+
+  .th-plan-card {
+    background: white;
+    box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.15);
+    font-size: 18px;
+    height: 100%;
+    margin: auto 8px;
+
+    .th-plan-info {
+      width: 100%;
+    }
+
+    .th-description {
+      text-align: center;
+      margin-top: 16px;
+
+      span {
+        color: $primary;
+      }
+    }
+
+    ul {
+      list-style: none;
+      padding: 24px;
+    }
+
+    .th-plan-feature {
+      @include th-flex-row-center;
+      margin: 4px 0;
+      white-space: nowrap;
+
+      svg {
+        color: $primary;
+        margin-right: 16px;
+        width: 18px;
+        height: 18px;
+      }
+    }
+  }
+
+  @media (max-width: $break-sm) {
+    .th-plan-card {
+      font-size: 16px;
+
+      ul {
+        padding: 24px 12px;
+        font-size: 15px;
+      }
+
+      .th-plan-feature {
+        svg {
+          margin-right: 8px;
+        }
+      }
+    }
+  }
+}

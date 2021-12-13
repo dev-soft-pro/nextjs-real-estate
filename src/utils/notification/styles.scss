@@ -1,0 +1,94 @@
+@import 'src/styles/variables/index';
+@import 'src/styles/mixins/index';
+@import 'node_modules/react-toastify/scss/main.scss';
+
+.th-notification-container {
+  width: 360px;
+  top: $header-height + 10px;
+
+  @media (max-width: $break-xs) {
+    width: 100%;
+    top: $header-height;
+  }
+}
+
+.th-notification-wrapper {
+  @include th-panel;
+  background: $white;
+
+  @media (max-width: $break-xs) {
+    margin-bottom: 2px;
+  }
+
+  .th-close-button {
+    @include th-close-button;
+    top: 10px;
+    right: 10px;
+    padding: 4px;
+    border-radius: 50%;
+
+    svg {
+      width: 20px;
+      height: 20px;
+    }
+  }
+}
+
+.th-notification {
+  padding: 8px 16px 8px 16px;
+
+  .th-notification-content {
+    @include th-flex-row;
+
+    > .th-icon {
+      margin-top: 4px;
+      margin-right: 12px;
+      width: 28px;
+      height: 28px;
+    }
+
+    .th-warning-icon {
+      color: $warning;
+    }
+
+    .th-success-icon {
+      color: $success;
+    }
+
+    .th-error-icon {
+      color: $error;
+    }
+
+    .th-info-icon {
+      color: $info;
+    }
+  }
+
+  .th-notification-title {
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    color: $black;
+  }
+
+  .th-notification-message {
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 8px;
+    color: $text;
+  }
+
+  .th-notification-action {
+    margin: 12px 0 0 0;
+    @include th-flex-row;
+    justify-content: flex-end;
+
+    .th-button {
+      background: $primary;
+      color: white;
+      font-size: 12px;
+      padding: 4px 12px;
+      border-radius: 4px;
+    }
+  }
+}

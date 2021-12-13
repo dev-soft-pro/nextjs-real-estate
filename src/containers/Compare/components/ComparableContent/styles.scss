@@ -1,0 +1,87 @@
+@import 'src/styles/variables/index';
+@import 'src/styles/mixins/index';
+
+.th-comparable-content {
+  position: relative;
+
+  background: white;
+  border: 1px solid #eee;
+  border-radius: 0px 0px 12px 12px;
+  border-top-width: 0px;
+  text-align: left;
+  margin-right: 11px;
+
+  .th-metrics {
+    width: 100%;
+  }
+
+  .th-category {
+    overflow: hidden;
+    .th-category-title {
+      @include th-flex-row-center;
+      justify-content: space-between;
+      background: #ececec;
+      border-bottom: 1px solid white;
+      color: #000;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: 500;
+      height: 36px;
+      padding: 0 15px;
+    }
+
+    .th-category-content {
+      transition: all 0.3s;
+      max-height: 0;
+    }
+
+    &.th-expanded {
+      .th-category-content {
+        max-height: unset;
+      }
+    }
+  }
+
+  .th-metric {
+    @include th-flex-row-center;
+    justify-content: space-between;
+    height: 50px;
+    padding: 10px;
+
+    font-size: 14px;
+    letter-spacing: -0.23px;
+
+    &-title {
+      flex: 1;
+      color: #000000;
+      cursor: pointer;
+      font-weight: 500;
+      line-height: 1;
+    }
+
+    &-value {
+      color: #858585;
+      flex: 1;
+      @include th-flex-row;
+      justify-content: space-between;
+      padding-left: 8px;
+    }
+
+    &-diff {
+      cursor: pointer;
+    }
+  }
+
+  .th-metric:nth-child(odd) {
+    background: #f7f7f7;
+  }
+
+  @media (max-width: $break-sm) {
+    .th-address {
+      font-size: 14px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+  }
+}

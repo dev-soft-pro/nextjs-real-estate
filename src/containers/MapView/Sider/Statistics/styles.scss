@@ -1,0 +1,9 @@
+.th-statistics-section {
+  flex: 1 1 auto;
+  border-bottom: 1px solid #eee;
+  overflow: auto;
+
+  .th-chart-container {
+    position: relative;
+  }
+}

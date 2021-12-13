@@ -1,0 +1,85 @@
+@import 'src/styles/variables/index';
+@import 'src/styles/mixins/index';
+
+.th-comparable-card {
+  @include th-flex-column;
+
+  .th-image {
+    width: 94px;
+    height: 57px;
+    border-radius: 12px;
+    object-fit: cover;
+    overflow: hidden;
+  }
+
+  .th-view-button {
+    align-self: flex-start;
+    border-radius: 4px;
+    color: $primary;
+    font-size: 12px;
+    font-weight: 500;
+    margin-bottom: 2px;
+  }
+
+  .th-info {
+    flex: 1;
+    @include th-flex-column;
+    margin-left: 19px;
+  }
+
+  .th-actions {
+    @include th-flex-row-center;
+    justify-content: space-between;
+    margin-top: 4px;
+  }
+
+  .th-color {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: blue;
+    margin-right: 4px;
+  }
+
+  .th-address {
+    color: #000;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: -0.27px;
+    white-space: nowrap;
+  }
+
+  .th-delete-button {
+    width: 30px;
+    height: 30px;
+
+    border-radius: 50%;
+    color: #a7a7a7;
+  }
+
+  .th-primary-mark {
+    width: 100px;
+    height: 24px;
+    background-color: #20cb4c;
+    border-radius: 12px;
+    color: #fff;
+    font-size: 12px;
+    line-height: 24px;
+    text-align: center;
+    margin-left: 6px;
+  }
+
+  .th-primary-check {
+    margin: 0;
+    .th-check {
+      padding: 5px;
+    }
+
+    .th-checkbox-label {
+      color: #858585;
+      font-size: 12px;
+      letter-spacing: -0.09px;
+    }
+  }
+}

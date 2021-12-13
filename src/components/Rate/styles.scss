@@ -1,0 +1,20 @@
+@import 'src/styles/variables/index';
+@import 'src/styles/mixins/index';
+
+.th-rate {
+  @include th-flex-row;
+  user-select: none;
+
+  .th-rate-star {
+    color: #e8e8e8;
+    font-size: 16px;
+  }
+
+  .th-rate-star:not(:last-child) {
+    margin-right: 4px;
+  }
+
+  .th-rate-star-full {
+    color: $primary;
+  }
+}

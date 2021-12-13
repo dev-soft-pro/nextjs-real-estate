@@ -1,0 +1,364 @@
+@import 'src/styles/variables/index';
+@import 'src/styles/mixins/index';
+
+$hamburger-layer-color: #fff;
+$hamburger-layer-width: 18px;
+$hamburger-layer-spacing: 4px;
+$hamburger-layer-height: 2px;
+$hamburger-hover-opacity: 1;
+$hamburger-layer-border-radius: 1px;
+$hamburger-padding-y: 0;
+$hamburger-padding-x: 0;
+
+@import 'node_modules/hamburgers/_sass/hamburgers/hamburgers.scss';
+
+.th-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: $header-height;
+  z-index: 100;
+
+  padding: 0 15px 0 20px;
+
+  background: $header;
+  user-select: none;
+  transition: transform 0.3s;
+
+  @include th-flex-row-center;
+
+  .th-logo {
+    margin-right: 100px;
+
+    .th-hexa-logo {
+      height: 42px;
+      width: 40px;
+    }
+
+    &.th-right {
+      margin-right: 0px;
+      margin-left: 24px;
+    }
+  }
+
+  .th-company-logo {
+    object-fit: contain;
+    height: calc(100% - 20px);
+    margin-right: 100px;
+    max-width: 150px;
+  }
+
+  .th-menu-button {
+    @include th-flex-row;
+    @include th-flex-center;
+
+    width: 56px;
+    height: $header-height;
+    margin-right: -15px;
+  }
+
+  .th-links {
+    flex: 1;
+    @include th-flex-row;
+  }
+
+  .th-auth-actions {
+    @include th-flex-row-center;
+
+    .th-signin-button,
+    .th-signup-button {
+      cursor: pointer;
+      @include th-flex-center;
+      width: 115px;
+      height: 42px;
+
+      border-radius: 21px;
+      border: 1px solid $secondary;
+      font-size: 14px;
+      font-weight: bold;
+      line-height: 1;
+      letter-spacing: -0.2px;
+      color: #ffffff;
+
+      margin-right: 20px;
+    }
+
+    .th-signup-button {
+      width: 145px;
+      padding: 0 9px 0 20px;
+      background: $secondary;
+      margin-right: 0px;
+
+      span {
+        flex: 1;
+      }
+    }
+  }
+
+  .th-avatar-wrapper {
+    border-radius: 50%;
+    color: unset;
+    text-decoration: none;
+    padding: 0;
+  }
+
+  .th-avatar-wrapper + .th-drop-menu-content {
+    left: unset;
+    right: 0;
+  }
+
+  .th-avatar {
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+  }
+
+  .th-help-button {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    border: 1px solid #6651f5;
+    background-color: #6651f5;
+    color: white;
+    @include th-flex-center;
+
+    font-size: 18px;
+    margin-left: 16px;
+  }
+
+  .th-help-button + .th-drop-menu-content {
+    left: unset;
+    right: 0;
+  }
+}
+
+.th-header.th-transparent {
+  background: rgba($color: $header, $alpha: 0);
+}
+
+.th-header-menu-container.th-popover {
+  transform: scale(0.9);
+  opacity: 0;
+  transition: transform 0.1s, opacity 0.2s;
+}
+
+.th-header-menu-container.th-popover--expanded {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.th-header-menu-container {
+  position: fixed;
+  top: 64px;
+  right: 8px;
+  width: 320px;
+  user-select: none;
+
+  .th-triangle-up {
+    border-bottom-color: rgba(0, 0, 0, 0.9) !important;
+    margin-left: auto;
+    margin-right: 12px;
+  }
+
+  .th-header-menu {
+    min-height: 480px;
+    backdrop-filter: blur(10px);
+    background-color: rgba(0, 0, 0, 0.9);
+    border-radius: 4px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    transition: all 0.3s;
+    opacity: 0;
+
+    .th-menu-content {
+      flex: 1;
+      z-index: 1;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      // transition: all 0.3s;
+
+      .th-auth-actions {
+        flex-direction: column;
+        width: 280px;
+        margin-bottom: 28px;
+
+        .th-signup-button {
+          width: calc(100% - 68px);
+          text-align: center;
+        }
+
+        .th-signin-button,
+        .th-signout-button {
+          border-color: $secondary;
+          color: white;
+          width: calc(100% - 68px);
+          margin: 20px 0;
+        }
+      }
+
+      .th-links {
+        flex: 1;
+        width: 280px;
+        flex-direction: column;
+        padding: 24px;
+      }
+
+      .th-menu-item {
+        display: block;
+        font-size: 20px;
+        font-weight: 500;
+        margin: 0;
+      }
+
+      .th-drop-menu:not(.th-drop-menu-mobile):hover .th-menu-item,
+      .th-drop-menu.th-drop-menu-mobile.th-expanded .th-menu-item,
+      .th-menu-item:hover {
+        background-color: unset;
+        box-shadow: none;
+      }
+
+      .th-drop-menu {
+        position: static;
+        .th-drop-menu-content {
+          position: unset;
+          background: transparent;
+          box-shadow: none;
+          border: none;
+          padding: 0px 0px 8px 8px;
+          display: none;
+        }
+
+        &:not(.th-drop-menu-mobile):hover .th-drop-menu-content,
+        &.th-drop-menu-mobile.th-expanded .th-drop-menu-content {
+          display: block;
+        }
+
+        .th-drop-menu-item {
+          color: #eee;
+        }
+
+        .th-drop-menu-item:hover {
+          background-color: unset;
+          color: white;
+          text-decoration: underline;
+        }
+      }
+
+      .th-divider {
+        width: calc(100% - 48px);
+        margin: 0px;
+        border-color: #595959;
+      }
+
+      .th-menu-footer {
+        text-align: center;
+        margin-top: 18px;
+
+        .th-copyright,
+        .th-page-link {
+          font-size: 12px;
+          font-weight: normal;
+          line-height: 1.14;
+          letter-spacing: -0.2px;
+          text-align: center;
+          color: #858585;
+        }
+
+        .th-copyright {
+          margin-bottom: 10px;
+        }
+
+        .th-page-link {
+          margin: 0 12px;
+        }
+
+        .th-social-links {
+          margin-top: 10px;
+          .th-social-icon {
+            color: #858585;
+            width: 24px;
+            height: 24px;
+            margin: 10px;
+
+            &:hover {
+              opacity: 0.8;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .th-header-menu--expanded {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 1280px) {
+  .th-header {
+    .th-customer-logo,
+    .th-logo {
+      margin-right: 24px;
+    }
+  }
+}
+
+@media (max-width: 560px), (max-height: 560px) {
+  .th-header-menu-container {
+    top: 59px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    pointer-events: none;
+    display: flex;
+
+    .th-header-menu {
+      min-height: unset;
+      visibility: hidden;
+      opacity: 0;
+      transition: opacity 0.3s;
+      border-radius: 0px;
+      flex: 1;
+      overflow: scroll;
+    }
+
+    .th-header-menu--expanded {
+      pointer-events: auto;
+      visibility: visible;
+      opacity: 1;
+
+      .th-menu-content {
+        flex: 1 0 auto;
+        background-color: #1d1d1d;
+        flex-wrap: nowrap;
+
+        .th-links {
+          .th-link {
+            font-size: 28px;
+          }
+        }
+
+        .th-auth-actions {
+          display: flex;
+          margin-right: 0px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $break-sm) {
+  body:not(.th-mapview-showed:not(.th-sider-showed)):not(.th-main-menu-showed):not(.th-filters-showed) {
+    .th-scrolled-down {
+      .th-header {
+        transform: translateY(-$header-height);
+      }
+    }
+  }
+}

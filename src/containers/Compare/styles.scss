@@ -1,0 +1,132 @@
+@import 'src/styles/variables/index';
+@import 'src/styles/mixins/index';
+
+$row-height: 56px;
+
+.th-compare {
+  min-height: 80vh;
+
+  .th-page-content {
+    padding: 10px 20px 30px;
+    position: relative;
+  }
+
+  .th-page-title {
+    color: #000000;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 1.25;
+    letter-spacing: -0.13px;
+    margin: 20px 0;
+  }
+
+  @media (max-width: $break-sm) {
+    padding: 0 15px 30px;
+    .th-page-title {
+      text-align: center;
+    }
+
+    .th-page-content {
+      padding: 0;
+    }
+  }
+
+  .th-add-button {
+    color: $primary;
+    font-size: 14px;
+    letter-spacing: -0.23px;
+
+    .th-icon {
+      margin-right: 12px;
+    }
+  }
+
+  .th-breaker {
+    margin: 28px 0 0;
+  }
+
+  .th-comparables {
+    @include th-flex-column;
+
+    .th-comparables-header,
+    .th-comparables-body {
+      @include th-flex-row;
+      overflow-x: auto;
+    }
+
+    .th-comparables-header {
+      position: sticky;
+      top: 60px;
+      z-index: 4;
+      background: white;
+      padding-top: 12px;
+
+      /* hide scrollbar */
+      scrollbar-width: none; /* Firefox */
+      -ms-overflow-style: none; /* IE 10+ */
+      &::-webkit-scrollbar {
+        display: none;
+        width: 0px;
+        background: transparent;
+      }
+
+      .th-new-comparable {
+        flex: 0 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: rgba($primary, 0.02);
+        border: 1px dashed $primary;
+        border-bottom: none;
+        border-top-left-radius: 12px;
+        border-top-right-radius: 12px;
+        color: $primary;
+        cursor: pointer;
+        font-size: 14px;
+        padding: 30px;
+        text-align: center;
+        width: 180px;
+
+        .th-icon {
+          width: 60px;
+          height: 60px;
+          margin-bottom: 16px;
+        }
+      }
+    }
+
+    .th-comparables-body {
+      .th-new-comparable {
+        flex: 0 0 auto;
+        background: rgba($primary, 0.02);
+        border: 1px dashed $primary;
+        border-top: none;
+        border-bottom-left-radius: 12px;
+        border-bottom-right-radius: 12px;
+        cursor: pointer;
+        width: 180px;
+      }
+    }
+
+    .th-comparable-card,
+    .th-comparable-content {
+      flex: 0 0 auto;
+      width: 220px;
+    }
+
+    .th-primary {
+      width: 280px;
+      position: sticky;
+      left: 0;
+      z-index: 3;
+    }
+
+    @media (max-width: $break-sm) {
+      .th-comparable-card,
+      .th-comparable-content {
+        width: 160px;
+        min-width: 160px;
+      }
+    }
+  }
+}

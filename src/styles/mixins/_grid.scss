@@ -1,0 +1,25 @@
+@mixin th-flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+@mixin th-flex-row-center {
+  @include th-flex-row;
+  align-items: center;
+}
+
+@mixin th-flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin th-flex-column-center {
+  @include th-flex-column;
+  align-items: center;
+}
+
+@mixin th-flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

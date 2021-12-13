@@ -1,0 +1,53 @@
+.th-auth-lock {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  cursor: pointer;
+  pointer-events: none;
+
+  & ~ *:not(.th-lock-disabled) {
+    filter: blur(1px) opacity(50%);
+    user-select: none;
+    pointer-events: none;
+  }
+
+  &.th-mode-transparent ~ *:not(.th-lock-disabled) {
+    filter: none;
+  }
+
+  &.th-mode-dark ~ *:not(.th-lock-disabled) {
+    filter: blur(3px) opacity(20%);
+  }
+
+  .th-icon {
+    color: #d43f51;
+    margin-bottom: 10px;
+    width: 48px;
+    height: 48px;
+    pointer-events: auto;
+    z-index: 1;
+  }
+
+  .th-unlock-button {
+    width: 155px;
+    height: 42px;
+    border-radius: 21px;
+
+    background-image: linear-gradient(to left, #465ff5, #6e4ef6);
+    color: white;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: -0.1px;
+    text-align: center;
+    pointer-events: auto;
+    z-index: 1;
+  }
+}

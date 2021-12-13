@@ -1,0 +1,170 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="380" height="640" viewBox="0 0 380 640">
+    <defs>
+        <rect id="a" width="312" height="10" rx="4"/>
+        <linearGradient id="b" x1="97.627%" x2="1.57%" y1="50%" y2="50%">
+            <stop offset="0%" stop-color="#465FF5"/>
+            <stop offset="100%" stop-color="#6E4EF6"/>
+        </linearGradient>
+        <path id="d" d="M10 .25C4.624.25.25 4.624.25 10s4.374 9.75 9.75 9.75 9.75-4.374 9.75-9.75S15.376.25 10 .25zm0 1.5A8.239 8.239 0 0 1 18.25 10 8.239 8.239 0 0 1 10 18.25 8.239 8.239 0 0 1 1.75 10 8.239 8.239 0 0 1 10 1.75zM9.25 5.5v3.75H5.5v1.5h3.75v3.75h1.5v-3.75h3.75v-1.5h-3.75V5.5h-1.5z"/>
+        <path id="f" d="M10 .25C4.624.25.25 4.624.25 10s4.374 9.75 9.75 9.75 9.75-4.374 9.75-9.75S15.376.25 10 .25zm0 1.5A8.239 8.239 0 0 1 18.25 10 8.239 8.239 0 0 1 10 18.25 8.239 8.239 0 0 1 1.75 10 8.239 8.239 0 0 1 10 1.75zm-4.5 7.5v1.5h9v-1.5h-9z"/>
+        <path id="h" d="M10 .25C4.624.25.25 4.624.25 10s4.374 9.75 9.75 9.75 9.75-4.374 9.75-9.75S15.376.25 10 .25zm0 1.5A8.239 8.239 0 0 1 18.25 10 8.239 8.239 0 0 1 10 18.25 8.239 8.239 0 0 1 1.75 10 8.239 8.239 0 0 1 10 1.75zM9.25 5.5v3.75H5.5v1.5h3.75v3.75h1.5v-3.75h3.75v-1.5h-3.75V5.5h-1.5z"/>
+        <path id="j" d="M10 .25C4.624.25.25 4.624.25 10s4.374 9.75 9.75 9.75 9.75-4.374 9.75-9.75S15.376.25 10 .25zm0 1.5A8.239 8.239 0 0 1 18.25 10 8.239 8.239 0 0 1 10 18.25 8.239 8.239 0 0 1 1.75 10 8.239 8.239 0 0 1 10 1.75zm-4.5 7.5v1.5h9v-1.5h-9z"/>
+        <path id="l" d="M10 .25C4.624.25.25 4.624.25 10s4.374 9.75 9.75 9.75 9.75-4.374 9.75-9.75S15.376.25 10 .25zm0 1.5A8.239 8.239 0 0 1 18.25 10 8.239 8.239 0 0 1 10 18.25 8.239 8.239 0 0 1 1.75 10 8.239 8.239 0 0 1 10 1.75zM9.25 5.5v3.75H5.5v1.5h3.75v3.75h1.5v-3.75h3.75v-1.5h-3.75V5.5h-1.5z"/>
+        <path id="n" d="M10 .25C4.624.25.25 4.624.25 10s4.374 9.75 9.75 9.75 9.75-4.374 9.75-9.75S15.376.25 10 .25zm0 1.5A8.239 8.239 0 0 1 18.25 10 8.239 8.239 0 0 1 10 18.25 8.239 8.239 0 0 1 1.75 10 8.239 8.239 0 0 1 10 1.75zm-4.5 7.5v1.5h9v-1.5h-9z"/>
+        <linearGradient id="p" x1="97.627%" x2="2.629%" y1="50%" y2="50%">
+            <stop offset="0%" stop-color="#00C853"/>
+            <stop offset="100%" stop-color="#4ACE3C"/>
+        </linearGradient>
+        <linearGradient id="q" x1="97.627%" x2="1.57%" y1="50%" y2="50%">
+            <stop offset="0%" stop-color="#465FF5"/>
+            <stop offset="100%" stop-color="#6E4EF6"/>
+        </linearGradient>
+        <path id="r" d="M1.5.5a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zM9 .5a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zm7.5 0a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3z"/>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <rect width="380" height="640" fill="#FFF" stroke="#EEE" rx="20"/>
+        <g transform="translate(34 540)">
+            <path stroke="#EEE" stroke-linecap="square" d="M.5 45V33M78.5 39v-6M232.5 39v-6M156.5 45V33M310.5 45V33"/>
+            <text fill="#858585" font-family="HelveticaNeue, Helvetica Neue" font-size="12" letter-spacing="-.092">
+                <tspan x="0" y="57">Inferior</tspan>
+            </text>
+            <text fill="#858585" font-family="HelveticaNeue, Helvetica Neue" font-size="12" letter-spacing="-.092">
+                <tspan x="139.117" y="57">Equal</tspan>
+            </text>
+            <text fill="#858585" font-family="HelveticaNeue, Helvetica Neue" font-size="12" letter-spacing="-.092">
+                <tspan x="266.186" y="57">Superior</tspan>
+            </text>
+            <g transform="translate(0 13)">
+                <mask id="c" fill="#fff">
+                    <use xlink:href="#a"/>
+                </mask>
+                <use fill="#EEE" xlink:href="#a"/>
+                <rect width="232" height="20" fill="url(#b)" mask="url(#c)" rx="4"/>
+            </g>
+            <circle cx="233" cy="18" r="11.5" fill="#465FF5" stroke="#FFF" stroke-width="3"/>
+            <circle cx="233" cy="18" r="5" fill="#FFF"/>
+        </g>
+        <text fill="#000" font-family="HelveticaNeue-Medium, Helvetica Neue" font-size="14" font-weight="400" letter-spacing="-.1" transform="translate(5 30)">
+            <tspan x="30" y="497">Condition</tspan>
+        </text>
+        <path stroke="#EEE" stroke-linecap="square" d="M36 492.488h310"/>
+        <g transform="translate(324 451.976)">
+            <mask id="e" fill="#fff">
+                <use xlink:href="#d"/>
+            </mask>
+            <g fill="#A7A7A7" mask="url(#e)">
+                <path d="M-2-2h24v24H-2z"/>
+            </g>
+        </g>
+        <g transform="translate(234 451.976)">
+            <mask id="g" fill="#fff">
+                <use xlink:href="#f"/>
+            </mask>
+            <g fill="#A7A7A7" mask="url(#g)">
+                <path d="M-2-2h24v24H-2z"/>
+            </g>
+        </g>
+        <text fill="#000" font-family="HelveticaNeue-Medium, Helvetica Neue" font-size="20" font-weight="400" letter-spacing=".3" transform="translate(234 448.976)">
+            <tspan x="49.29" y="20">4</tspan>
+        </text>
+        <text fill="#858585" font-family="HelveticaNeue, Helvetica Neue" font-size="14" letter-spacing="-.233" transform="translate(35 448.976)">
+            <tspan x="0" y="18.119">Bathroom</tspan>
+        </text>
+        <path stroke="#EEE" stroke-linecap="square" d="M36 434.5h310"/>
+        <g transform="translate(324 395)">
+            <mask id="i" fill="#fff">
+                <use xlink:href="#h"/>
+            </mask>
+            <g fill="#A7A7A7" mask="url(#i)">
+                <path d="M-2-2h24v24H-2z"/>
+            </g>
+        </g>
+        <g transform="translate(234 395)">
+            <mask id="k" fill="#fff">
+                <use xlink:href="#j"/>
+            </mask>
+            <g fill="#A7A7A7" mask="url(#k)">
+                <path d="M-2-2h24v24H-2z"/>
+            </g>
+        </g>
+        <text fill="#000" font-family="HelveticaNeue-Medium, Helvetica Neue" font-size="20" font-weight="400" letter-spacing=".3" transform="translate(234 392)">
+            <tspan x="49.29" y="20">4</tspan>
+        </text>
+        <text fill="#858585" font-family="HelveticaNeue, Helvetica Neue" font-size="14" letter-spacing="-.233" transform="translate(35 392)">
+            <tspan x="0" y="18">Bedroom</tspan>
+        </text>
+        <path stroke="#EEE" stroke-linecap="square" d="M36 377.5h310"/>
+        <g transform="translate(324 338)">
+            <mask id="m" fill="#fff">
+                <use xlink:href="#l"/>
+            </mask>
+            <g fill="#A7A7A7" mask="url(#m)">
+                <path d="M-2-2h24v24H-2z"/>
+            </g>
+        </g>
+        <g transform="translate(234 338)">
+            <mask id="o" fill="#fff">
+                <use xlink:href="#n"/>
+            </mask>
+            <g fill="#A7A7A7" mask="url(#o)">
+                <path d="M-2-2h24v24H-2z"/>
+            </g>
+        </g>
+        <text fill="#000" font-family="HelveticaNeue-Medium, Helvetica Neue" font-size="20" font-weight="400" letter-spacing=".3" transform="translate(234 335)">
+            <tspan x="32.16" y="20">3200</tspan>
+        </text>
+        <text fill="#858585" font-family="HelveticaNeue, Helvetica Neue" font-size="14" letter-spacing="-.233" transform="translate(35 335)">
+            <tspan x="0" y="18">Living Area</tspan>
+        </text>
+        <g>
+            <text fill="#858585" font-family="HelveticaNeue, Helvetica Neue" font-size="12" letter-spacing="-.092" transform="translate(15 238)">
+                <tspan x="41" y="37">TopHap Valuation</tspan>
+            </text>
+            <text fill="#000" font-family="HelveticaNeue-Medium, Helvetica Neue" font-size="14" font-weight="400" letter-spacing="-.1" transform="translate(15 238)">
+                <tspan x="41" y="15">$985,000</tspan>
+            </text>
+            <path fill="#485EF5" d="M37 238h4v44h-4z"/>
+        </g>
+        <g>
+            <text fill="#858585" font-family="HelveticaNeue, Helvetica Neue" font-size="12" letter-spacing="-.092" transform="translate(206 238)">
+                <tspan x="19" y="37">Estimated Value of</tspan> <tspan x="19" y="53">improvements</tspan>
+            </text>
+            <text fill="#000" font-family="HelveticaNeue-Medium, Helvetica Neue" font-size="14" font-weight="400" letter-spacing="-.1" transform="translate(206 238)">
+                <tspan x="19" y="15">$240,000</tspan>
+            </text>
+            <path fill="#00C853" d="M206 238h4v44h-4z"/>
+        </g>
+        <g transform="translate(34 198)">
+            <rect width="312" height="20" fill="#F3F3F3" stroke="#EEE" rx="4"/>
+            <rect width="146" height="20" x="114" fill="url(#p)" rx="4"/>
+            <path fill="url(#q)" d="M4 0h116v20H4a4 4 0 0 1-4-4V4a4 4 0 0 1 4-4z"/>
+        </g>
+        <path stroke="#EEE" stroke-linecap="square" d="M5 316h370"/>
+        <text fill="#000" font-family="HelveticaNeue-Medium, Helvetica Neue" font-size="32" font-weight="400" letter-spacing="-.13" transform="translate(5 30)">
+            <tspan x="30" y="113">$1,225,000</tspan>
+        </text>
+        <text fill="#858585" font-family="HelveticaNeue, Helvetica Neue" font-size="14" letter-spacing="-.233" transform="translate(5 30)">
+            <tspan x="30" y="49">Estimated value after </tspan> <tspan x="30" y="67">improvements</tspan>
+        </text>
+        <g>
+            <text fill="#858585" font-family="HelveticaNeue, Helvetica Neue" font-size="14" letter-spacing="-.233" transform="translate(35 162)">
+                <tspan x="0" y="13">Confidence: </tspan>
+            </text>
+            <path fill="#6651F5" d="M255 162.577l4.928 2.846a2 2 0 0 1 1 1.732v5.69a2 2 0 0 1-1 1.732L255 177.423a2 2 0 0 1-2 0l-4.928-2.846a2 2 0 0 1-1-1.732v-5.69a2 2 0 0 1 1-1.732l4.928-2.846a2 2 0 0 1 2 0zM276 162.577l4.928 2.846a2 2 0 0 1 1 1.732v5.69a2 2 0 0 1-1 1.732L276 177.423a2 2 0 0 1-2 0l-4.928-2.846a2 2 0 0 1-1-1.732v-5.69a2 2 0 0 1 1-1.732l4.928-2.846a2 2 0 0 1 2 0zM297 162.577l4.928 2.846a2 2 0 0 1 1 1.732v5.69a2 2 0 0 1-1 1.732L297 177.423a2 2 0 0 1-2 0l-4.928-2.846a2 2 0 0 1-1-1.732v-5.69a2 2 0 0 1 1-1.732l4.928-2.846a2 2 0 0 1 2 0zM318 162.577l4.928 2.846a2 2 0 0 1 1 1.732v5.69a2 2 0 0 1-1 1.732L318 177.423a2 2 0 0 1-2 0l-4.928-2.846a2 2 0 0 1-1-1.732v-5.69a2 2 0 0 1 1-1.732l4.928-2.846a2 2 0 0 1 2 0z"/>
+            <path fill="#EEE" d="M339 162.577l4.928 2.846a2 2 0 0 1 1 1.732v5.69a2 2 0 0 1-1 1.732L339 177.423a2 2 0 0 1-2 0l-4.928-2.846a2 2 0 0 1-1-1.732v-5.69a2 2 0 0 1 1-1.732l4.928-2.846a2 2 0 0 1 2 0z"/>
+        </g>
+        <g>
+            <g transform="translate(324 40)">
+                <mask id="s" fill="#fff">
+                    <use xlink:href="#r"/>
+                </mask>
+                <g fill="#A7A7A7" mask="url(#s)">
+                    <path d="M-3-10h24v24H-3z"/>
+                </g>
+            </g>
+            <text fill="#000" font-family="HelveticaNeue-Bold, Helvetica Neue" font-size="14" font-weight="bold" letter-spacing="-.1" transform="translate(5 30)">
+                <tspan x="30" y="14">Estimated Value of Improvements</tspan>
+            </text>
+        </g>
+    </g>
+</svg>

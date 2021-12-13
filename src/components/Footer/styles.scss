@@ -1,0 +1,177 @@
+@import 'src/styles/variables/index';
+@import 'src/styles/mixins/index';
+
+.th-footer {
+  padding-top: 42px;
+  margin-top: auto;
+  background: white;
+
+  .th-divider {
+    background: #eeeeee;
+    height: 1px;
+  }
+
+  .th-footer-content {
+    @include th-flex-column;
+
+    .th-link:hover {
+      text-decoration: underline;
+    }
+
+    .th-navs {
+      display: flex;
+      flex-direction: row;
+      height: 276px;
+
+      :global(.th-logo) {
+        width: 58px;
+        height: 66px;
+      }
+
+      .th-about-app {
+        flex: 2;
+        .th-app-description {
+          color: #858585;
+          font-size: 14px;
+          letter-spacing: -0.2px;
+
+          width: 274px;
+          height: 88px;
+          margin-top: 20px;
+        }
+      }
+
+      .th-column {
+        flex: 1;
+
+        .th-column-title {
+          color: #6b87e9;
+          font-size: 12px;
+          font-weight: 600;
+          letter-spacing: 0.2px;
+          margin-bottom: 26px;
+          margin-top: 9px;
+        }
+
+        .th-link {
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          font-size: 14px;
+          font-weight: normal;
+          letter-spacing: -0.2px;
+          color: #858585;
+          height: 48px;
+        }
+      }
+    }
+
+    .th-bottom-navs {
+      margin-top: 21px;
+      margin-bottom: 36px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      font-size: 14px;
+      font-weight: normal;
+      line-height: 1.14;
+      letter-spacing: -0.2px;
+      color: #858585;
+
+      .th-social-links {
+        flex: 0 0 auto;
+        margin: 0 -16px;
+      }
+
+      .th-copyright,
+      .th-link {
+        color: #858585;
+        margin-right: 11px;
+      }
+
+      .th-link,
+      .th-bre {
+        margin: 0 11px;
+      }
+
+      .th-social-icon {
+        color: #858585;
+        width: 48px;
+        height: 48px;
+        &:hover {
+          opacity: 0.8;
+        }
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+
+  @media (max-width: $break-lg) {
+    .th-footer-content {
+      .th-navs {
+        height: unset;
+        flex-flow: row wrap;
+
+        .th-about-app {
+          flex-basis: 100%;
+          margin-bottom: 30px;
+          .th-app-description {
+            display: none;
+          }
+        }
+
+        .th-column {
+          margin-bottom: 41px;
+
+          .th-column-title {
+            margin-bottom: 16px;
+          }
+        }
+      }
+
+      .th-bottom-navs {
+        padding-top: 20px;
+        .th-link,
+        .th-copyright,
+        .th-bre {
+          display: block;
+          margin: 8px 0;
+        }
+      }
+    }
+  }
+
+  @media (max-width: $break-md) {
+    .th-footer-content {
+      .th-bottom-navs {
+        flex-direction: column;
+        align-items: flex-start;
+
+        .th-link {
+          display: inline-block;
+        }
+
+        .th-links {
+          .th-copyright {
+            display: block;
+          }
+
+          .th-link {
+            margin: 10px 32px 0 0;
+          }
+        }
+
+        .th-social-links {
+          margin-top: 16px;
+        }
+      }
+    }
+  }
+
+  @media (max-width: $break-sm) {
+    padding: 32px 32px 0 32px;
+  }
+}

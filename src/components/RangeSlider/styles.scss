@@ -1,0 +1,17 @@
+@import 'react-input-range/src/scss/index.scss';
+
+.input-range {
+  margin: 16px 0;
+
+  .input-range__track {
+    background: #6651f5;
+  }
+
+  .input-range__slider {
+    background: #6651f5;
+  }
+
+  .input-range__track--background {
+    background: #eee;
+  }
+}

@@ -1,0 +1,37 @@
+@import 'src/styles/variables/index';
+
+.th-privacy-policy {
+  color: $text;
+  margin-bottom: 40px;
+
+  h1 {
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 1.17;
+    text-align: center;
+    margin: 48px auto;
+  }
+
+  h1,
+  strong {
+    color: $black;
+  }
+
+  p {
+    margin: 8px 0;
+  }
+
+  p strong:only-child {
+    display: block;
+    margin: 16px 0;
+  }
+
+  @media (max-width: $break-sm) {
+    text-align: justify;
+
+    h1 {
+      font-size: 36px;
+      margin-bottom: 40px;
+    }
+  }
+}

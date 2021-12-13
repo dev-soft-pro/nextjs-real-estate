@@ -1,0 +1,74 @@
+.th-analytics-popup {
+  padding: 6px 8px;
+  font-size: 10px;
+  line-height: 16px;
+  letter-spacing: -0.08px;
+  white-space: nowrap;
+  background: rgba(white, 0.85);
+  border-radius: 4px;
+
+  .th-hexagon {
+    position: relative;
+    width: 12px;
+    height: 6.93px;
+    background-color: #814cf1;
+    color: #814cf1;
+    margin: 3.46px 0;
+
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      width: 0;
+      border-left: 6px solid transparent;
+      border-right: 6px solid transparent;
+      left: 0;
+    }
+
+    &:before {
+      bottom: 100%;
+      border-bottom: 3.46px solid currentColor;
+    }
+
+    &:after {
+      top: 100%;
+      width: 0;
+      border-top: 3.46px solid currentColor;
+    }
+  }
+
+  > .th-info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 2px 0;
+  }
+
+  .th-icon {
+    width: 24px;
+
+    color: transparent;
+    svg {
+      width: 16px;
+      height: 16px;
+      stroke: #858585;
+    }
+
+    .th-hexagon {
+      margin-left: 2px;
+    }
+  }
+
+  .th-label {
+    font-weight: normal;
+    color: #858585;
+    margin-right: 4px;
+  }
+
+  .th-value {
+    font-weight: 500;
+    color: #000000;
+    white-space: normal;
+  }
+}

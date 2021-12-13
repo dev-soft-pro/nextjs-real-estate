@@ -1,0 +1,58 @@
+.th-aggregation-popup {
+  padding: 6px 8px;
+  font-size: 10px;
+  line-height: 16px;
+  letter-spacing: -0.08px;
+  white-space: nowrap;
+  background: rgba(white, 0.85);
+  border-radius: 4px;
+  overflow: hidden;
+
+  .th-circle {
+    width: 12px;
+    height: 12px;
+    border-radius: 6px;
+    background: #7eb546;
+  }
+
+  > .th-info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 2px 0;
+  }
+
+  .th-icon {
+    width: 24px;
+
+    color: transparent;
+    svg {
+      width: 16px;
+      height: 16px;
+      stroke: #858585;
+    }
+
+    .th-circle {
+      margin-left: 2px;
+    }
+
+    .th-radius {
+      width: 10px;
+      height: 10px;
+      background: transparent;
+      border: 1px solid transparent;
+      margin-left: 3px;
+    }
+  }
+
+  .th-label {
+    font-weight: normal;
+    color: #858585;
+    margin-right: 4px;
+  }
+
+  .th-value {
+    font-weight: 500;
+    color: #000000;
+  }
+}

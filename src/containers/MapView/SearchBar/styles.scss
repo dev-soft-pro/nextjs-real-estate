@@ -1,0 +1,296 @@
+@import 'src/styles/variables/index';
+@import 'src/styles/mixins/index';
+
+.th-search-bar {
+  background: $white;
+  border-bottom: 1px solid rgba(133, 133, 133, 0.2);
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: $search-bar-height;
+
+  @include th-flex-row-center;
+  transition: transform 0.3s;
+  z-index: 90;
+
+  .th-geo-search {
+    flex: 0 0 auto;
+    width: calc(#{$sider-width} - 30px);
+    margin: 0 15px;
+  }
+
+  .th-filters {
+    flex: 1;
+    @include th-flex-row;
+
+    .th-filter-button {
+      display: none;
+      border-radius: 4px;
+      border: solid 1px $primary;
+      padding: 0 10px 0 12px;
+      margin: 0 15px 0 12px;
+
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: -0.1px;
+      color: #000000;
+      height: 40px;
+
+      .th-icon {
+        color: $primary;
+        margin-left: 8px;
+      }
+    }
+
+    // checkbox
+    .th-checkbox {
+      margin: 0;
+      .th-check {
+        width: 32px;
+        height: 32px;
+        margin: 0 16px 0 8px;
+      }
+
+      .th-checkbox-label {
+        font-size: 12px;
+        font-weight: normal;
+        letter-spacing: -0.2px;
+        color: #858585;
+      }
+    }
+
+    // label and input
+    .th-label {
+      font-size: 12px;
+      font-weight: normal;
+      line-height: 1.33;
+      letter-spacing: -0.2px;
+    }
+
+    .th-input {
+      width: 100%;
+      border-radius: 4px;
+      border: 1px solid #eee;
+      font-size: 12px;
+      font-weight: normal;
+      letter-spacing: -0.2px;
+      color: black;
+      padding: 10px 16px;
+      text-align: center;
+    }
+
+    .th-range-input {
+      .th-label {
+        padding: 0 16px;
+      }
+
+      .th-input {
+        flex: 1 1 0;
+        min-width: 0px;
+      }
+    }
+
+    // option button
+    .th-option-button {
+      font-size: 12px;
+      line-height: 2.83;
+      letter-spacing: -0.2px;
+      justify-content: left;
+      border-radius: 4px;
+      background: white;
+      padding: 0 8px !important;
+
+      &.th-selected {
+        background: #6651f5;
+        color: white;
+      }
+    }
+
+    // select
+    .th-input-container {
+      flex: 1;
+      .th-select {
+        width: 100%;
+      }
+    }
+
+    // options
+    .th-filter-option {
+      margin: 0;
+      &:not(:last-child) {
+        margin-right: 10px;
+      }
+      flex: 0 0 auto;
+    }
+
+    .th-filter-list-option {
+      .th-filter-option {
+        margin: 0;
+      }
+    }
+
+    .th-size-option {
+      position: absolute;
+      visibility: hidden;
+    }
+
+    .th-status-option,
+    .th-type-option {
+      @include th-flex-row;
+      flex-wrap: wrap;
+
+      .th-checkbox {
+        flex: 1 1 50%;
+      }
+
+      .th-close-date {
+        width: 100%;
+
+        label {
+          font-size: 14px;
+        }
+      }
+    }
+
+    .th-price-option {
+      .th-prices {
+        flex: 1;
+        padding: 12px 20px;
+        @include th-flex-column;
+      }
+    }
+
+    .th-beds-option,
+    .th-baths-option,
+    .th-garages-option,
+    .th-stories-option {
+      .th-option-button {
+        margin: 0 6px;
+        justify-content: center;
+        padding: 0px 16px;
+      }
+    }
+
+    .th-more-option {
+    }
+  }
+
+  .th-actions {
+    @include th-flex-row;
+    margin: 0 15px;
+
+    .th-action-button {
+      &:not(:last-child) {
+        margin-right: 10px;
+      }
+
+      height: 42px;
+      padding: 0 20px;
+      justify-content: space-between;
+      white-space: nowrap;
+      background-color: #a7a7a7;
+      font-size: 12px;
+      font-weight: 600;
+      line-height: 1;
+      letter-spacing: -0.2px;
+      text-align: center;
+      color: #ffffff;
+      border-radius: 4px;
+
+      .th-icon {
+        width: 20px;
+        height: 20px;
+        margin-left: 4px;
+      }
+    }
+  }
+
+  @media (max-width: $break-md) {
+    .th-actions {
+      margin-left: 5px;
+      .th-action-button {
+        &:not(:last-child) {
+          margin-right: 5px;
+        }
+
+        padding: 0 10px;
+        span {
+          display: none;
+        }
+        .th-icon {
+          margin: 0px;
+        }
+      }
+    }
+  }
+
+  @media (max-width: $break-sm) {
+    .th-geo-search {
+      flex: 1;
+      width: unset;
+      margin-right: 0px;
+    }
+
+    .th-filters {
+      flex: 0 1 auto;
+
+      .th-filter-button {
+        display: flex;
+      }
+
+      .th-filter-list-option {
+        position: fixed;
+        top: $app-header-height;
+        left: 0;
+        right: 0;
+        bottom: 100%;
+        display: flex;
+        transition: all 0.3s;
+
+        > .th-option {
+          display: none;
+        }
+
+        &.th-expanded {
+          bottom: 0;
+        }
+
+        .th-option-content {
+          position: static;
+          border: none;
+
+          width: 100%;
+          height: 100%;
+
+          .th-options {
+            flex: 1 1 auto;
+            overflow: scroll;
+            -webkit-overflow-scrolling: touch;
+          }
+        }
+      }
+    }
+
+    .th-actions {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: $break-sm) {
+  .th-sider-showed:not(.th-filters-showed) {
+    .th-scrolled-down {
+      .th-search-bar {
+        transform: translateY(-$header-height - $search-bar-height);
+
+        .th-more-option {
+          &.th-expanded {
+            transform: translateY($header-height);
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,36 @@
+@import 'src/styles/variables/index';
+
+.th-information-table {
+  .th-table-section {
+    .th-section-title {
+      background: #eee;
+      padding: 4px 8px;
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    .th-section-content {
+      column-count: 2;
+      padding: 8px;
+
+      @media (max-width: $break-sm) {
+        column-count: 1;
+      }
+    }
+
+    .th-table-item {
+      .th-item-name {
+        font-size: 14px;
+        font-weight: 500;
+      }
+
+      .th-item-info {
+        color: #666;
+        font-size: 12px;
+        font-weight: 300;
+        list-style-type: disc;
+        padding-left: 15px;
+      }
+    }
+  }
+}

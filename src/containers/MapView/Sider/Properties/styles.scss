@@ -1,0 +1,86 @@
+@import 'src/styles/variables/index';
+@import 'src/styles/mixins/index';
+
+$gap: 6px;
+$hMargin: 10px;
+$vMargin: 3px;
+
+.th-properties-panel {
+  flex: 1;
+  @include th-flex-column;
+
+  .th-panel-header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 100;
+
+    flex: 0 0 auto;
+    width: 100%;
+    border-bottom: 1px solid #eee;
+    background: white;
+
+    @include th-flex-row-center;
+    justify-content: space-between;
+
+    .th-properties-count {
+      font-size: 12px;
+      font-weight: normal;
+      line-height: 1.33;
+      letter-spacing: -0.2px;
+      color: #858585;
+      margin-left: 15px;
+    }
+  }
+
+  .th-properties {
+    flex: 1 1 auto;
+    position: relative;
+
+    .th-properties-list {
+      background: $white;
+      padding-bottom: 80px;
+    }
+
+    .th-row {
+      @include th-flex-row;
+      padding: $vMargin 0;
+    }
+
+    .th-item-wrapper {
+      flex: 1;
+      overflow: hidden;
+      border: 1px solid #eee;
+      border-radius: 6px;
+
+      &:first-child {
+        margin-left: $hMargin;
+      }
+
+      &:last-child {
+        margin-right: $hMargin;
+      }
+
+      &:not(:last-child) {
+        margin-right: $gap / 2;
+      }
+
+      &:not(:first-child) {
+        margin-left: $gap / 2;
+      }
+    }
+
+    .th-loader-wrapper {
+      text-align: center;
+      padding: 12px;
+    }
+  }
+
+  @media (min-width: $break-sm) {
+    .th-detail {
+      flex: 0 0 auto;
+      height: calc(100vh - #{$search-bar-height});
+      overflow: auto;
+    }
+  }
+}

@@ -1,0 +1,91 @@
+@import 'src/styles/variables/index';
+
+.th-profile {
+  width: 100%;
+  margin: auto;
+  padding: 36px 64px;
+  position: relative;
+
+  .th-avatar-wrapper {
+    width: 96px;
+    height: 96px;
+    border-radius: 50%;
+    // background: rgba(#5c2ad0, 0.1);
+    overflow: hidden;
+    margin: auto;
+    border: 1px solid #d8dfe3;
+    font-size: 20px;
+  }
+
+  .th-avatar {
+    font-size: 24px;
+    width: 96px;
+    height: 96px;
+  }
+
+  .th-avatar-description {
+    color: #37474f;
+    font-size: 14px;
+  }
+
+  .th-subscription {
+    font-size: 12px;
+    text-align: left;
+    line-height: 16px;
+
+    .th-checkbox {
+      margin: 0 0 0 -6px;
+    }
+
+    .th-check {
+      padding: 4px;
+      margin-right: 4px;
+    }
+
+    .th-checkbox-label {
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    p {
+      padding: 0 2px 0 16px;
+    }
+  }
+
+  .th-save-button {
+    background-image: linear-gradient(to left, #465ff5, #6e4ef6);
+    border-radius: 4px;
+    color: white;
+    font-size: 14px;
+    padding: 6px 20px;
+  }
+
+  .th-username-validate {
+    font-size: 12px;
+    color: #f25138;
+  }
+}
+
+.th-photo-editor-modal {
+  padding: 0;
+}
+
+.th-sub-pages {
+  .th-close-account-button {
+    // background-image: linear-gradient(to left, #ff7875, #ff4d4f);
+    border: 1px solid #ff4d4f;
+    border-radius: 4px;
+    color: #ff4d4f;
+    flex: 0 0 auto;
+    font-size: 14px;
+    padding: 6px 12px;
+    white-space: nowrap;
+  }
+
+  .th-close-account-label {
+    color: #37474f;
+    font-size: 12px;
+    margin-left: 16px;
+    word-wrap: none;
+  }
+}

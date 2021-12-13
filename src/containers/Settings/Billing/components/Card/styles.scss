@@ -1,0 +1,88 @@
+@import 'src/styles/variables/index';
+@import 'src/styles/mixins/index';
+
+.th-billing .th-card {
+  color: #4f566b;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+
+  .th-card-info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .th-card-brand {
+    background-image: url(https://stripe.com/img/v3/pricing/payments/card-brands.svg?2);
+    margin-right: 12px;
+    height: 25px;
+  }
+
+  .th-card-brand-visa {
+    width: 44px;
+  }
+
+  .th-card-brand-mastercard {
+    background-position: -48px 0;
+    width: 84px;
+  }
+
+  .th-card-brand-maestro {
+    background-position: -443px 0;
+    width: 72px;
+  }
+
+  .th-card-brand-americanExpress {
+    background-position: -138px 0;
+    width: 52px;
+  }
+
+  .th-card-brand-discover {
+    background-position: -274px 0;
+    width: 56px;
+  }
+
+  .th-card-brand-jcb {
+    background-position: -357px 0;
+    width: 28px;
+  }
+
+  .th-card-brand-dinersClub {
+    background-position: -217px 0;
+    width: 29px;
+  }
+
+  .th-card-brand-chinaUnion {
+    background-position: -408px 0;
+    width: 31px;
+  }
+
+  .th-card-icon {
+    height: 20px;
+  }
+
+  .th-card-last4 {
+    margin-right: 12px;
+  }
+
+  .th-actions {
+    @include th-flex-row;
+    margin-left: 16px;
+  }
+
+  .th-action-button {
+    border: 1px solid #6651f588;
+    border-radius: 4px;
+    color: #6651f5;
+    font-size: 12px;
+    padding: 0 12px;
+    margin-right: 8px;
+  }
+
+  .th-cancel-button {
+    color: #ff4d4f;
+    border: 1px solid #ff4d4f;
+  }
+}

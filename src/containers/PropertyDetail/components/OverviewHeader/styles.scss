@@ -1,0 +1,254 @@
+@import 'src/styles/variables/index';
+@import 'src/styles/mixins/index';
+
+.th-overview-header {
+  width: 100%;
+  @include th-flex-row;
+  position: sticky;
+  top: 0;
+
+  background: #fff;
+  transition: top 0.3s;
+  z-index: 20;
+
+  .th-back-button {
+    @include th-flex-center;
+    width: 42px;
+    color: #a7a7a7;
+  }
+
+  .th-content {
+    flex: 1;
+    @include th-flex-column;
+    overflow: hidden;
+    padding: 10px 50px 20px 30px;
+    position: relative;
+  }
+
+  .th-back-button + .th-content {
+    padding-left: 0px;
+  }
+
+  .th-location-actions {
+    @include th-flex-row-center;
+
+    .th-location-button {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      color: $primary;
+      background: rgba($primary, 0.1);
+      margin-left: -6px;
+      margin-right: 6px;
+    }
+  }
+
+  .th-metrics {
+    @include th-flex-row;
+    justify-content: space-between;
+    max-width: 480px;
+    margin-bottom: 4px;
+
+    .th-property-info {
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: center;
+
+      .th-property-info-title {
+        color: #858585;
+        font-size: 12px;
+        line-height: 1.5;
+        letter-spacing: -0.2px;
+      }
+
+      .th-property-info-value {
+        color: #000000;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 1.14;
+        letter-spacing: -0.13px;
+        margin-bottom: 2px;
+      }
+    }
+  }
+
+  .th-actions {
+    position: absolute;
+    right: -42px;
+    bottom: -4px;
+    @include th-flex-column-center;
+
+    .th-button {
+      background: #a7a7a7;
+      border-radius: 50%;
+      color: #fff;
+      width: 30px;
+      height: 30px;
+      margin: 4px;
+    }
+  }
+}
+
+.th-property-detail:not(.th-break-sm) .th-overview-header {
+  .th-info {
+    @include th-flex-column;
+    position: relative;
+    margin-top: 12px;
+    padding-left: 180px;
+    padding-right: 10px;
+
+    .th-status {
+      position: absolute;
+      top: 4px;
+      left: 8px;
+      white-space: nowrap;
+      z-index: 1;
+
+      .th-status-label {
+        width: 75px;
+      }
+    }
+
+    .th-prices {
+      position: absolute;
+      left: 0;
+      top: 9px;
+
+      border: 1px solid #eee;
+      border-radius: 14px;
+      padding: 12px 24px;
+      text-align: center;
+      white-space: nowrap;
+      width: 160px;
+
+      .th-price {
+        color: #000000;
+        font-size: 14px;
+        font-weight: bold;
+        line-height: 1.43;
+        letter-spacing: -0.06px;
+        margin-top: 8px;
+      }
+
+      .th-pricepersqft {
+        font-size: 12px;
+        line-height: 1.33;
+        letter-spacing: -0.09px;
+        color: #858585;
+      }
+    }
+
+    .th-location-actions {
+      margin-bottom: 8px;
+    }
+
+    .th-location {
+      font-weight: 500;
+      line-height: normal;
+      white-space: nowrap;
+
+      .th-address {
+        font-size: 26px;
+        letter-spacing: -0.11px;
+      }
+
+      .th-region {
+        color: #858585;
+        font-size: 15px;
+        font-weight: normal;
+        letter-spacing: -0.06px;
+      }
+    }
+  }
+}
+
+.th-property-detail.th-break-sm .th-overview-header {
+  .th-content {
+    padding: 8px 12px;
+  }
+
+  .th-info {
+    line-height: 1;
+    position: relative;
+  }
+
+  .th-status {
+    margin: 10px 0;
+  }
+
+  .th-prices {
+    position: absolute;
+    top: 46px;
+    right: 0px;
+
+    text-align: right;
+
+    .th-price {
+      font-size: 16px;
+      font-weight: bold;
+      margin-bottom: 4px;
+    }
+
+    .th-pricepersqft {
+      color: #858585;
+      font-size: 13px;
+    }
+  }
+
+  .th-location-actions {
+    margin-top: 15px;
+    margin-bottom: 12px;
+  }
+
+  .th-location {
+    @include th-flex-column;
+
+    .th-address {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 4px;
+    }
+
+    .th-region {
+      color: #858585;
+      font-size: 13px;
+    }
+  }
+
+  .th-metrics {
+    // justify-content: space-around;
+    .th-property-info {
+      .th-property-info-title {
+        font-size: 10px;
+      }
+
+      .th-property-info-value {
+        font-size: 13px;
+      }
+    }
+  }
+
+  .th-breadcrumb {
+    margin-top: 4px;
+    margin-bottom: 8px;
+    font-size: 10px;
+
+    .th-breadcrumb-item:not(:last-child)::after {
+      content: ' > ';
+      margin: 4px;
+    }
+  }
+
+  .th-actions {
+    top: 0;
+    bottom: unset;
+    right: -4px;
+    @include th-flex-row-center;
+  }
+}
+
+.th-property-detail.th-break-sm {
+  .th-page-header + .th-overview-header {
+    top: $header-height + $search-bar-height;
+  }
+}

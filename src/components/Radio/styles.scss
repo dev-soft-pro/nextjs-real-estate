@@ -1,0 +1,12 @@
+@import 'src/styles/variables/index';
+
+.th-radio-wrapper {
+  .th-radio,
+  .th-radio-checked {
+    color: $primary !important;
+  }
+
+  .th-radio-label {
+    font-size: 14px !important;
+  }
+}

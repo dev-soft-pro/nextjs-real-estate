@@ -1,0 +1,42 @@
+@import 'src/styles/variables/index';
+
+.th-property-detail .th-view-types {
+  display: flex;
+  .th-view-type {
+    flex: 1;
+    height: 60px;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: -0.1px;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &:not(:last-child) {
+      border-right: 1px solid rgba(#fff, 0.2);
+    }
+
+    &.th-selected {
+      color: #8ed24b;
+    }
+  }
+
+}
+
+.th-property-detail.th-break-lg .th-view-types {
+  .th-view-type {
+    height: 50px;
+    flex-direction: row;
+    span {
+      padding-left: 8px;
+    }
+  }
+}
+
+.th-property-detail.th-break-md .th-view-types {
+  .th-view-type {
+    height: 40px;
+  }
+}

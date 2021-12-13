@@ -1,0 +1,46 @@
+@import 'src/styles/variables/index';
+@import 'src/styles/mixins/index';
+
+.th-faq {
+  width: 100%;
+  .th-faq-title {
+    font-size: 32px;
+    margin: 24px 24px;
+  }
+
+  .th-faq-question {
+    @include th-flex-row-center;
+    justify-content: space-between;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 16px 24px;
+  }
+
+  .th-faq-answer {
+    color: $text;
+    font-size: 16px;
+    font-weight: 300;
+    padding: 8px 24px 16px 24px;
+    display: none;
+  }
+
+  .th-faq-item {
+    border-top: 1px solid #eee;
+
+    &:last-child {
+      border-bottom: 1px solid #eee;
+    }
+  }
+
+  .th-faq-item.th-expanded {
+    background: white;
+    // border-left: 1px solid #eee;
+    // border-right: 1px solid #eee;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.1);
+
+    .th-faq-answer {
+      display: block;
+    }
+  }
+}
